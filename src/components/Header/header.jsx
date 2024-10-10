@@ -25,12 +25,12 @@ function AnimatedHeader() {
         },
         logoContainer: {
             display: 'flex',
-            flexDirection: 'column', // Add this to stack logo and text vertically
+            flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             backgroundColor: 'black',
             height: '80vh',
-            marginTop: '10px', // Adjust the margin top to be less
+            marginTop: '10px',
         },
         lottie: {
             width: '100%',
@@ -54,7 +54,6 @@ function AnimatedHeader() {
 
     return (
         <div className="App">
-            {/* Render the umbrella animation */}
             {!isUmbrellaComplete && (
                 <div>
                     <div id='mobile' style={styles.umbrellaContainer}>
@@ -65,7 +64,7 @@ function AnimatedHeader() {
                             eventListeners={[
                                 {
                                     eventName: 'complete',
-                                    callback: () => setUmbrellaComplete(true), // Set to true when umbrella animation completes
+                                    callback: () => setUmbrellaComplete(true),
                                 },
                             ]}
                         />
@@ -75,8 +74,7 @@ function AnimatedHeader() {
 
             {isUmbrellaComplete && (
                 <Hero />
-            )
-            }
+            )}
         </div >
     );
 }

@@ -3,7 +3,6 @@ import './index.css';
 import CreativeSection from './components/Creative';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Hero from './components/Hero';
 import Innovative from './components/Inovative';
 import SliderSection from './components/SliderSection';
 import AnimatedHeader from './components/Header/header';
