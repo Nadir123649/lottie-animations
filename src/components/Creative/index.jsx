@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import brandinglogo from '../../images/branding.png';
 import productlogo from '../../images/product creation.png';
 import developmentlogo from '../../images/app development.png';
@@ -6,6 +6,27 @@ import marketinglogo from '../../images/digital martketing.png';
 import advertisinglogo from '../../images/advertising.png';
 
 function CreativeSection() {
+    const [isVisible, setIsVisible] = useState(false);
+        const [hasAnimated, setHasAnimated] = useState(false);
+
+    const handleScroll = () => {
+        const element = document.getElementById("needs-section");
+        if (element && !hasAnimated) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.75) {
+                setIsVisible(true);
+                setHasAnimated(true);
+            }
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [hasAnimated]);
+ 
     const dataSets = [
         {
             id: 1,
@@ -40,9 +61,32 @@ function CreativeSection() {
     ];
 
     return (
-        <div>
-            <section>
-                <h1 className='font-semibold text-[28px] text-center max-w-[640px] mx-auto'>
+    
+            <section id='needs-section'  className=' creative-box-section py-40 relative'>
+                <div className="graph__wrapper">
+                    <svg width="315px" height="107px" viewBox="0 0 315 107" version="1.1" style={{ overflow: 'visible' }}>
+                        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                            <path
+                                id="Path-1"
+                                className={`path ${isVisible ? 'start-animation' : ''}`}
+                                fill="none"
+                                stroke="black" 
+                                strokeWidth="5"
+                                strokeLinejoin="round"
+                                strokeMiterlimit="10"
+                                d="M1.4,2.1c0,0,86,57,211.5,41.5s172.5-24.5,289,81"
+                            />
+                            <path className="dashed" fill="none" stroke="white" strokeWidth="8" strokeLinejoin="round" strokeMiterlimit="10" d="M1.4,2.1c0,0,86,57,211.5,41.5s172.5-24.5,289,81"/>   
+                            <polyline id="arrow" className={isVisible ? 'animate-arrow' : ''} points="0,-9 18,0 0,9 5,0" fill="black">
+                                <animateMotion rotate="auto" begin={isVisible ? "0s" : "1s"} dur="1.6s" repeatCount="1" fill="freeze">
+                                    <mpath xlinkHref="#Path-1" />
+                                </animateMotion>
+                            </polyline>
+                        </g>
+                    </svg>
+                </div>
+
+                <h1 className='font-semibold text-[28px] text-center max-w-[640px] mx-auto pb-20'>
                     Creative solutions. Exceptional results.
                     Assisting brands succeed through every challenge.
                 </h1>
@@ -58,7 +102,7 @@ function CreativeSection() {
                     ))}
                 </div>
             </section>
-        </div>
+    
     );
 }
 
