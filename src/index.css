@@ -27,19 +27,18 @@ body {
 
 
 .home-banner h1 {
-    font-size: 18px;
+    font-size: 19px;
     letter-spacing: -.6px;
-    line-height: 40px;
-    margin: 0 auto;
+    line-height: 30px;
+    margin: 60px 20px;
     opacity: 1;
     position: relative;
     color: white;
     text-align: center;
     transition: opacity 1s ease, transform 1s ease;
-    width: 200px;
-    z-index: 2
+    z-index: 2;
+    max-width: 100%;
 }
-
 
 .home-banner__umbrella {
     animation: bounce 2s infinite;
@@ -74,24 +73,6 @@ main.finished .home-banner {
 
 .contact-banner #contact-two svg {
     transform: scale(2) !important
-}
-
-.contact-banner {
-    align-items: center;
-    background: black;
-    display: flex;
-    height: 590px;
-    justify-content: center;
-    position: relative;
-    width: 100vw
-}
-
-.contact-banner h1 {
-    font-size: 20px;
-    letter-spacing: -.4px;
-    line-height: 28px;
-    text-align: center;
-    width: 310px
 }
 
 
@@ -157,50 +138,16 @@ main.finished .home-banner {
     }
 }
 
-@media(min-width:900px) {
-    main.finished .home-banner {
-        height: 100vh
-    }
-}
-
-@media(min-width:900px) {
-    .contact-banner #contact-one svg {
-        transform: scale(3.6) !important
-    }
-}
-
-@media(min-width:900px) {
-    .contact-banner #contact-one {
-        transform: translate(-550px, -110px)
-    }
-}
-
-@media(min-width:900px) {
-    .contact-banner h1 {
-        font-size: 28px;
-        letter-spacing: -1px;
-        line-height: 48px;
-        margin-top: -11.1111111111vw;
-        width: 940px
-    }
-
-    .contact-banner #contact-two {
-        transform: translate(600px, 100px)
-    }
-}
 
 @media(min-width:900px) {
     .home-banner h1 {
-        font-size: 48px;
+        font-size: 38px;
         letter-spacing: -1px;
-        line-height: 60px;
-        width: 940px
-    }
-}
-
-@media(min-width:900px) {
-    .contact-banner #contact-two svg {
-        transform: scale(3.8) !important
+        line-height: normal;
+        max-width: 700px;
+        width: 100%;
+        max-width: 800px;
+        margin-top: 130px;
     }
 }
 
@@ -210,18 +157,8 @@ main.finished .home-banner {
     }
 }
 
-@media(min-width:900px) {
-    .contact-banner {
-        height: 100vh;
-        min-height: 900px
-    }
-}
 
-@media(min-width:900px) {
-    .contact-banner__umbrella--desktop {
-        display: block
-    }
-}
+
 
 @media(min-width:900px) {
     .home-banner__umbrella--desktop {
