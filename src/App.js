@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import './index.css';
+import CreativeSection from './components/Creative';
+import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Hero from './components/Hero';
+import Innovative from './components/Inovative';
+import SliderSection from './components/SliderSection';
+import AnimatedHeader from './components/Header/header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <AnimatedHeader />
+        {/* <Hero /> */}
+        <Innovative />
+        <CreativeSection />
+        <SliderSection />
+        <Footer />
+      </div>
     </div>
   );
 }
