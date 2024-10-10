@@ -13,7 +13,6 @@ function App() {
     <div className="App">
       <div>
         <AnimatedHeader />
-        {/* <Hero /> */}
         <Innovative />
         <CreativeSection />
         <SliderSection />

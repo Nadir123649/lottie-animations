@@ -172,6 +172,15 @@ main.finished .home-banner {
     }
 }
 
+
+/*=== Trigger  ===*/
+.animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
 @keyframes bounce {
     0% {
         transform: translateY(0)
@@ -185,3 +194,18 @@ main.finished .home-banner {
         transform: translateY(0)
     }
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeIn {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
