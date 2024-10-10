@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* .client-logo-container .slide img {
+    width: 400px !important;
+    height: 108px !important;
+    max-height: 108px !important;
+} */
+.marketing-boxes img {
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.hover-container {
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-img,
+.hover-title {
+    transition: transform 0.3s ease;
+}
+
+.hover-description {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hover-container p {
+    text-align: center;
+}
+
+.hover-container:hover .hover-img {
+    transform: scale(1.1);
+
+}
+
+.hover-container:hover .hover-title {
+    transform: scale(1.1);
+}
+
+.hover-container:hover .hover-description {
+    opacity: 1;
+    transform: translateY(0);
+}
