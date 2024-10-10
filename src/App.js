@@ -17,12 +17,12 @@ function App() {
   return (
     <div className="App">
       <div>
-        <AnimatedHeader isUmbrellaComplete={isUmbrellaComplete} handleAnimationComplete={handleAnimationComplete}/>
+        <AnimatedHeader isUmbrellaComplete={isUmbrellaComplete} handleAnimationComplete={handleAnimationComplete} />
         {isUmbrellaComplete && <div>
           <Innovative />
-        <CreativeSection />
-        <SliderSection />
-        <Footer />
+          <CreativeSection />
+          <SliderSection />
+          <Footer />
         </div>}
       </div>
     </div>
