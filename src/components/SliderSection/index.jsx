@@ -1,7 +1,7 @@
 import React from "react";
 
 function SliderSection() {
-    return <div>SliderSection</div>;
+    return <div></div>;
 }
 
 export default SliderSection
