@@ -33,6 +33,7 @@ function Hero() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
+            gap: '200px',
             backgroundColor: 'black',
             height: '80vh',
             marginTop: '10px',
@@ -41,15 +42,15 @@ function Hero() {
             transition: 'transform 1s ease-in-out, opacity 1s ease-in-out', // Transition effect
         },
         lottie: {
-            width: 'auto',
-            height: '60px',
-            maxWidth: '320px',
-            maxHeight: '100%',
+            width: '100%',
+            maxWidth: '230px',
+            height: 'auto',
+
         },
         text: {
             color: 'white',
             textAlign: 'center',
-            animation: isJiggling ? 'jiggle 0.5s infinite' : 'none', // Apply jiggle animation
+            animation: isJiggling ? 'jiggle 0.6s infinite' : 'none', // Apply jiggle animation
         },
     };
 

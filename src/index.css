@@ -17,7 +17,7 @@ body {
     align-items: center;
     background: black;
     display: flex;
-    min-height: 75vh;
+    min-height: 65vh;
     justify-content: center;
     margin-bottom: 17.8890876565vw;
     position: relative;
@@ -141,12 +141,11 @@ main.finished .home-banner {
 
 @media(min-width:900px) {
     .home-banner h1 {
-        font-size: 32px;
+        font-size: 30px;
         letter-spacing: -1px;
         line-height: 44px;
-        max-width: 700px;
+        max-width: 650px;
         width: 100%;
-        max-width: 700px;
     }
 }
 
