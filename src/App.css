@@ -9,8 +9,8 @@
     max-height: 108px !important;
 } */
 .marketing-boxes img {
-    height: 50px !important;
-    width: 50px !important;
+    width: 60px;
+    height: 60px;
 }
 
 
@@ -93,4 +93,83 @@
     border: none;
     width: 100%;
     margin-top: 50px;
+}
+
+.arrow-one {
+    width: 600px !important;
+    height: 300px;
+}
+
+.arrow-two {
+    width: 300px;
+    height: 300px;
+    left: 20px;
+    bottom: 30px;
+}
+
+.arrow-three {
+    width: 600px;
+    height: 600px;
+
+}
+
+.arrow-four {
+    width: 200px;
+    height: 300px;
+
+}
+
+.arrow-five {
+    width: 300px;
+    height: 300px;
+}
+
+.description-title {
+    padding-bottom: 60px;
+}
+
+@media screen and (min-width: 480px) {
+    .logo-slide {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .description-title {
+        padding-bottom: 10px;
+    }
+
+    .arrow-one {
+        position: absolute;
+        right: 0px;
+        bottom: -20px;
+        width: 200px !important;
+        height: 100px;
+    }
+
+    .arrow-two {
+        width: 100px;
+        height: 300px;
+        bottom: 120px;
+
+    }
+
+    .arrow-three {
+        width: 300px;
+        height: 100px;
+        bottom: -40px;
+    }
+
+    .arrow-four {
+        width: 100px;
+        height: 300px;
+        bottom: -140px;
+
+    }
+
+    .arrow-five {
+        width: 150px;
+        height: 300px;
+        bottom: -140px;
+    }
 }

@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import asset7Logo from '../../images/Asset-7.png';
-import Lottie from 'lottie-react'; // Import Lottie
+import Lottie from 'lottie-react'; 
 import arrowAnimation from '../../lottie-animation/stroke-animation/data2.json';
 import curlyarrowAnimation from '../../lottie-animation/stroke-animation/data4.json';
-import { Player } from 'lottie-react';
 
 const companiesdata = [
     { id: 1, logo: asset7Logo },
@@ -14,6 +13,33 @@ const companiesdata = [
 ];
 
 const SliderSection = () => {
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observerOptions = {
+            threshold: 0.7,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true); 
+                }
+            });
+        }, observerOptions);
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, [hasAnimated]);
+
     const sliderSettings = {
         infinite: true,
         slidesToShow: 2,
@@ -50,34 +76,39 @@ const SliderSection = () => {
     };
 
     return (
-        <section className='py-20 relative'>
-            <div className='container client-logo-container mx-auto px-4 mb-[90px]'>
+        <section ref={sectionRef} className='py-20 relative'>
+            <div className='container client-logo-container mx-auto px-4 mb-[38px] md:mb-[90px]'>
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
-                        <div key={company.id} className='slide flex justify-center items-center py-2'>
+                        <div key={company.id} className='slide flex justify-center items-center py-2 logo-slide'>
                             <img src={company.logo} alt={`Logo ${company.id}`} className='bg-[#F1F1F1] max-w-[430px] mx-auto w-full block' />
                         </div>
                     ))}
                 </Slider>
             </div>
-            {/* <div className='flex justify-center mb-4'>
-              
-            </div> */}
-              <Lottie 
+
+            {hasAnimated && (
+       <Lottie 
                     animationData={arrowAnimation} 
                     loop={false} 
-                    style={{ width: 300, height: 300 }} 
-                    className='absolute left-[20px] bottom-[30px]'
+                    // style={{ width: 300, height: 300 }} 
+                    className='absolute  arrow-two'
                     keepLastFrame={true} 
-            />
-            <Lottie 
+                />  
+               
+            )}
+
+            {hasAnimated && (
+                <Lottie 
                     animationData={curlyarrowAnimation} 
                     loop={false} 
-                    style={{ width: 200, height: 300 }} 
-                    className='absolute right-[20px] bottom-[-30px]'
+                    // style={{ width: 600, height: 300 }} 
+                    className='absolute right-[-100px] bottom-[-30px] arrow-one'
                     keepLastFrame={true} 
                 />
-            <div>
+            )}
+
+            <div className='py-12'>
                 <p className='text-3xl text-black font-semibold text-center'>
                     Trusted to lead brands through complex and <br /> challenging transformations
                 </p>
