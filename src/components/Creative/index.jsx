@@ -115,24 +115,25 @@ function CreativeSection() {
                 />
             )}
 
-            <h1 className='font-semibold text-[20px] md:text-[28px] text-center max-w-[640px] mx-auto  description-title'>
+            <h1 className='font-semibold text-[18px] md:text-[28px] text-center max-w-[640px] mx-auto  description-title'>
                 Creative solutions. Exceptional results.
                 Assisting brands succeed through every challenge.
             </h1>
             <div>
-                <Slider {...sliderSettings}>
-                    {dataSets.map(({ id, title, description, logo }) => (
-                        <div key={id} className='flex flex-col gap-2 items-center p-4 marketing-boxes'>
-                            <div className='hover-container flex flex-col items-center gap-2'>
-                                <img src={logo} alt={title} className='hover-img' />
-                                <h1 className='hover-title font-semibold text-[17px]'>{title}</h1>
-                                <p className='hover-description'>{description}</p>
+                <div className='container'>
+                    <Slider {...sliderSettings}>
+                        {dataSets.map(({ id, title, description, logo }) => (
+                            <div key={id} className='flex flex-col gap-2 items-center p-4 marketing-boxes'>
+                                <div className='hover-container flex flex-col items-center gap-2'>
+                                    <img src={logo} alt={title} className='hover-img' />
+                                    <h1 className='hover-title font-semibold text-[17px]'>{title}</h1>
+                                    <p className='hover-description'>{description}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </Slider>
+                        ))}
+                    </Slider>
+                </div>
             </div>
-
         </section>
     );
 }
