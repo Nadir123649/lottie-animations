@@ -47,15 +47,20 @@ const SliderSection = () => {
     };
 
     return (
-        <section className='bg-[#F1F1F1]'>
-            <div className='container client-logo-container mx-auto px-4'>
+        <section className='py-20'>
+            <div className='container client-logo-container mx-auto px-4 mb-[90px]'>
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
-                        <div key={company.id} className='slide flex justify-center items-center p-4'>
-                            <img src={company.logo} alt={`Logo ${company.id}`} />
+                        <div key={company.id} className='slide flex justify-center items-center py-2'>
+                            <img src={company.logo} alt={`Logo ${company.id}`} className=' bg-[#F1F1F1] max-w-[430px] mx-auto w-full block' />
                         </div>
                     ))}
                 </Slider>
+            </div>
+            <div>
+                <p className='text-3xl text-black font-semibold text-center'>
+                    Trusted to lead brands through complex and <br /> challenging transformations
+                </p>
             </div>
         </section>
     );
