@@ -141,13 +141,12 @@ main.finished .home-banner {
 
 @media(min-width:900px) {
     .home-banner h1 {
-        font-size: 38px;
+        font-size: 32px;
         letter-spacing: -1px;
-        line-height: normal;
+        line-height: 44px;
         max-width: 700px;
         width: 100%;
-        max-width: 800px;
-        margin-top: 130px;
+        max-width: 700px;
     }
 }
 
@@ -197,15 +196,24 @@ main.finished .home-banner {
 
 @keyframes fadeIn {
     from {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
+
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  .fadeIn {
+}
+
+.fadeIn {
     animation: fadeIn 1s ease-in-out forwards;
-  }
+}
+
+.main-footer {
+    border-radius: 100% 100% 0 0;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}

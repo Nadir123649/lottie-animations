@@ -2,7 +2,7 @@ import React from 'react';
 import Lottie from 'react-lottie';
 import umbrellaAnimation from '../../lottie-animation/Desktop.json';
 import Hero from '../Hero';
-function AnimatedHeader({ isUmbrellaComplete,handleAnimationComplete }) {
+function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
     const defaultOptions = (animationData) => ({
         loop: false, // Set to false for both animations to not loop
         autoplay: true,
@@ -12,7 +12,7 @@ function AnimatedHeader({ isUmbrellaComplete,handleAnimationComplete }) {
         },
     });
 
-    const [animationSpeed, setAnimationSpeed] = React.useState(0.5);
+    const [animationSpeed, setAnimationSpeed] = React.useState(0.6);
 
     const styles = {
         umbrellaContainer: {
@@ -40,7 +40,7 @@ function AnimatedHeader({ isUmbrellaComplete,handleAnimationComplete }) {
         logo: {
             width: 'auto',
             height: '50px', // Decrease the height to make the logo smaller
-            maxWidth: '320px',
+            maxWidth: '120px',
             maxHeight: '100%',
         },
         text: {
