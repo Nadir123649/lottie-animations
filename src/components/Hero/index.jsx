@@ -63,16 +63,15 @@ function Hero() {
 
     return (
         <section className="home-banner flex flex-col">
-     
             <style>{jiggleKeyframes}</style>
-            <div style={{position:'relative', zIndex: 22}}>
-            <Lottie
-                options={defaultOptions(logoAnimation)}
-                speed={animationSpeed}
-                style={{...styles.lottie, }}
-            />
+            <div style={{ position: 'relative', zIndex: 22 }}>
+                <Lottie
+                    options={defaultOptions(logoAnimation)}
+                    speed={animationSpeed}
+                    style={{ ...styles.lottie, }}
+                />
             </div>
-            
+
             <h1 style={styles.text}>An umbrella company delivering bold solutions across all areas of creative communications</h1>
 
             <div className="home-banner__umbrella home-banner__umbrella--desktop">

@@ -157,8 +157,6 @@ main.finished .home-banner {
     }
 }
 
-
-
 @keyframes slideUpTo5vh {
     0% {
         transform: translateY(50vh);
