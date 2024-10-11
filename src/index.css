@@ -91,7 +91,8 @@ main.finished .home-banner {
         height: 100vh;
         z-index: 2;
         transform: translateY(50vh);
-        animation: slideUpTo5vh 2s ease-out forwards;
+        transition: all 1s ease;
+        animation: slideUpTo5vh  2s ease-out forwards;
     }
 
 }
@@ -160,10 +161,12 @@ main.finished .home-banner {
 @keyframes slideUpTo5vh {
     0% {
         transform: translateY(50vh);
+        transition: all 1s ease;
     }
 
     100% {
         transform: translateY(-50vh);
         display: none;
+        transition: all 1s ease;
     }
 }

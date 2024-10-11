@@ -76,7 +76,6 @@ function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
                     <div class="layer"></div>
                     <Hero />
                 </>
-
             )}
         </div >
     );
