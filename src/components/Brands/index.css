@@ -1,0 +1,97 @@
+.heading {
+  font-family: "Akzidenz Grotesk Roman", Sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4em;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin: 10rem;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  /* height: 100px; */
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.icon-small {
+  max-width: 100%;
+  /* max-height: 100%; */
+  object-fit: contain;
+}
+
+.h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.para {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0 0;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.grid-item:hover .img {
+  transform: translateY(-30px);
+}
+
+.grid-item:hover h2 {
+  transform: translateY(-30px);
+}
+
+.grid-item:hover p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+    margin-bottom: 20px;
+  }
+}

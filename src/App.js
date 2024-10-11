@@ -7,6 +7,7 @@ import SliderSection from './components/SliderSection';
 import AnimatedHeader from './components/Header/header';
 import './App.css';
 import './index.css';
+import Brands from './components/Brands';
 
 function App() {
   const [isUmbrellaComplete, setUmbrellaComplete] = React.useState(false);
@@ -22,6 +23,7 @@ function App() {
           <Innovative />
           <CreativeSection />
           <SliderSection />
+          <Brands />
           <Footer />
         </div>}
       </div>
