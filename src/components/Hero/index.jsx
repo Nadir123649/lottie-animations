@@ -5,6 +5,7 @@ import logoAnimation from '../../lottie-animation/logo main.json';
 function Hero() {
     const [isSlideComplete, setIsSlideComplete] = useState(false);
     const [animationSpeed, setAnimationSpeed] = useState(0.5);
+    const [isJiggling, setIsJiggling] = useState(false);
 
     const defaultOptions = (animationData) => ({
         loop: false, // Set to false for both animations to not loop
@@ -48,21 +49,41 @@ function Hero() {
         text: {
             color: 'white',
             textAlign: 'center',
-            marginTop: '10px',
-            fontSize: '16px',
+            animation: isJiggling ? 'jiggle 0.5s infinite' : 'none', // Apply jiggle animation
         },
     };
 
+    const jiggleKeyframes = `
+        @keyframes jiggle {
+            0% { transform: translateY(0); }
+            25% { transform: translateY(-5px); }
+            50% { transform: translateY(5px); }
+            75% { transform: translateY(-3px); }
+            100% { transform: translateY(0); }
+        }
+    `;
+
     useEffect(() => {
+        // Add jiggle effect after slide up completes
         const timer = setTimeout(() => {
             setIsSlideComplete(true);
-        }, 500);
+            setIsJiggling(true);
+        }, 500); // Adjust slide up time as needed
 
-        return () => clearTimeout(timer);
+        // Stop jiggling after a certain duration
+        const jiggleTimer = setTimeout(() => {
+            setIsJiggling(false);
+        }, 2000); // Duration of the jiggle effect
+
+        return () => {
+            clearTimeout(timer);
+            clearTimeout(jiggleTimer);
+        };
     }, []);
 
     return (
         <section className="home-banner">
+            <style>{jiggleKeyframes}</style>
             <div style={styles.container}>
                 <div style={styles.heroContainer}>
                     <Lottie
@@ -70,7 +91,7 @@ function Hero() {
                         speed={animationSpeed}
                         style={styles.lottie}
                     />
-                    <h1>An umbrella company delivering bold solutions across all areas of creative communications</h1>
+                    <h1 style={styles.text}>An umbrella company delivering bold solutions across all areas of creative communications</h1>
                 </div>
             </div>
             <div className="home-banner__umbrella home-banner__umbrella--desktop">
