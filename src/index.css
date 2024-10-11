@@ -22,7 +22,7 @@ body {
     justify-content: center;
     margin-bottom: 17.8890876565vw;
     position: relative;
-    transition: all 1s ease;
+    transition: all 1.5s ease;
     width: 100%;
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 .home-banner__umbrella {
-    animation: bounce 2s infinite;
+    animation: bounce 2.5s infinite ease-in-out;
     left: 0;
     position: absolute;
     top: 100%;
