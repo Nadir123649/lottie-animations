@@ -36,9 +36,8 @@ function Hero() {
             maxHeight: '100vh',
         },
         logo: {
-            width: 'auto',
-            height: '60px', // Decrease the height to make the logo smaller
-            maxWidth: '320px',
+            width: 'auto',// Decrease the height to make the logo smaller
+            maxWidth: '250px',
             maxHeight: '100%',
         },
         text: {
