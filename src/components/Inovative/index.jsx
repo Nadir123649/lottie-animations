@@ -60,8 +60,7 @@ function Innovative() {
                     autoplay
                     loop={false}
                     src={leftarrowAnimation}
-
-                    className='absolute right-[40px] bottom-[-130px]  arrow-five w-full'
+                    className='absolute right-[40px] bottom-[-130px] arrow-five w-full'
                     keepLastFrame={true}
                 />
             )}

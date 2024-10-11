@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import asset7Logo from '../../images/Asset-7.png';
-import Lottie from 'lottie-react'; 
+import Lottie from 'lottie-react';
 import arrowAnimation from '../../lottie-animation/stroke-animation/data2.json';
 import curlyarrowAnimation from '../../lottie-animation/stroke-animation/data4.json';
 
@@ -24,7 +24,7 @@ const SliderSection = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting && !hasAnimated) {
-                    setHasAnimated(true); 
+                    setHasAnimated(true);
                 }
             });
         }, observerOptions);
@@ -86,33 +86,34 @@ const SliderSection = () => {
                     ))}
                 </Slider>
             </div>
-
-            {hasAnimated && (
-       <Lottie 
-                    animationData={arrowAnimation} 
-                    loop={false} 
-                    // style={{ width: 300, height: 300 }} 
-                    className='absolute  arrow-two'
-                    keepLastFrame={true} 
-                />  
-               
-            )}
-
-            {hasAnimated && (
-                <Lottie 
-                    animationData={curlyarrowAnimation} 
-                    loop={false} 
-                    // style={{ width: 600, height: 300 }} 
-                    className='absolute right-[-100px] bottom-[-30px] arrow-one'
-                    keepLastFrame={true} 
-                />
-            )}
-
-            <div className='py-12'>
+            <div className='py-12 mb-[38px] md:mb-[90px]'>
                 <p className='text-3xl text-black font-semibold text-center'>
                     Trusted to lead brands through complex and <br /> challenging transformations
                 </p>
             </div>
+
+            {hasAnimated && (
+                <Lottie
+                    animationData={arrowAnimation}
+                    loop={false}
+                    // style={{ width: 300, height: 300 }} 
+                    className='absolute  arrow-two'
+                    keepLastFrame={true}
+                />
+
+            )}
+
+            {hasAnimated && (
+                <Lottie
+                    animationData={curlyarrowAnimation}
+                    loop={false}
+                    // style={{ width: 600, height: 300 }} 
+                    className='absolute right-[-100px] bottom-[-30px] arrow-one'
+                    keepLastFrame={true}
+                />
+            )}
+
+
         </section>
     );
 };
