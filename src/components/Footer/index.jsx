@@ -5,7 +5,12 @@ import FooterBg from "../../images/Asset-12.png";
 function Footer() {
     return (
         <footer className="relative">
-            <img src={FooterBg} alt="" className="w-full relative top-[1px] h-[90px] " />
+            <div className="relative bottom-[-80px]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="none">
+                    <path d="M0 100 C 480 0, 960 0, 1440 100 L 1440 200 L 0 200 Z" fill="#000000" />
+                </svg>
+            </div>
+            {/* <img src={FooterBg} alt="" className="w-full relative top-[1px] h-[90px] " /> */}
             <div className="main-footer relative flex flex-col md:flex-row bg-black justify-between items-center px-5 pb-[5px]">
                 <p className="text-white text-base mb-0  md:pb-0 ">
                     © Constantinou. 2024. All rights reserved

@@ -59,7 +59,7 @@ function Hero() {
                 />
             </div>
 
-            <h1 style={styles.text}>An umbrella company delivering bold solutions across all areas of creative communications</h1>
+            <h1>An umbrella company delivering bold solutions across all areas of creative communications</h1>
 
             <div className="home-banner__umbrella home-banner__umbrella--desktop">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 253.9">
