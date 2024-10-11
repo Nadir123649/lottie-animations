@@ -6,20 +6,20 @@ import asset7Logo from '../../images/Asset-7.png';
 
 const companiesdata = [
     { id: 1, logo: asset7Logo },
-    { id: 2, logo: asset7Logo},
+    { id: 2, logo: asset7Logo },
 ];
 
 const SliderSection = () => {
-    
+
     const sliderSettings = {
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
+        speed: 5000,
         dots: false,
         arrows: false,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 300,
         cssEase: "linear",
         responsive: [
             {
