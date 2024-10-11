@@ -3,6 +3,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import rightarrowAnimation from '../../lottie-animation/stroke-animation/data3.json';
 import leftarrowAnimation from '../../lottie-animation/stroke-animation/data5.json';
 
+
 function Innovative() {
     const [hasAnimated, setHasAnimated] = useState(false);
     const sectionRef = useRef(null);
@@ -29,7 +30,10 @@ function Innovative() {
     }, [hasAnimated]);
 
     return (
-        <section ref={sectionRef} className="box fadeIn relative flex justify-center items-center flex-col px-3 md:px-5 py-20">
+        <section
+            ref={sectionRef}
+            className={`box fadeIn relative flex justify-center items-center flex-col px-3 md:px-5 py-20 ${hasAnimated ? 'fade-up' : ''}`}
+        >
             <h1 className="text-center text-lg md:text-3xl font-bold leading-normal md:leading-[40px]">
                 We do everything imaginable in the world of creative <br className="hidden md:block" />
                 communications, from design and product creation <br className="hidden md:block" />
@@ -41,8 +45,7 @@ function Innovative() {
                     autoplay
                     loop={false}
                     src={rightarrowAnimation}
-                    // style={{ width: 200, height: 300 }}
-                    className='absolute left-[20px] arrow-four w-full'
+                    className="absolute left-[20px] arrow-four w-full"
                     keepLastFrame={true}
                 />
             )}
@@ -60,7 +63,7 @@ function Innovative() {
                     autoplay
                     loop={false}
                     src={leftarrowAnimation}
-                    className='absolute right-[40px] bottom-[-130px] arrow-five w-full'
+                    className="absolute right-[40px] bottom-[-130px] arrow-five w-full"
                     keepLastFrame={true}
                 />
             )}

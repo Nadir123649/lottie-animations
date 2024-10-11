@@ -18,10 +18,10 @@ function CreativeSection() {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting && !hasAnimated) {
-                    setHasAnimated(true); 
+                    setHasAnimated(true);
                 }
             },
-            { threshold: 0.5 } 
+            { threshold: 0.5 }
         );
 
         if (sectionRef.current) {
@@ -33,7 +33,7 @@ function CreativeSection() {
                 observer.unobserve(sectionRef.current);
             }
         };
-    }, [hasAnimated]); 
+    }, [hasAnimated]);
 
     const dataSets = [
         {
@@ -111,7 +111,7 @@ function CreativeSection() {
                     src={arrowAnimation}
                     // style={{ height: '600px', width: '600px' }}
                     className='absolute  bottom-[-260px] right-0 arrow-three'
-                    keepLastFrame={true} 
+                    keepLastFrame={true}
                 />
             )}
 
@@ -119,18 +119,20 @@ function CreativeSection() {
                 Creative solutions. Exceptional results.
                 Assisting brands succeed through every challenge.
             </h1>
-
-            <Slider {...sliderSettings}>
-                {dataSets.map(({ id, title, description, logo }) => (
-                    <div key={id} className='flex flex-col gap-2 items-center p-4 marketing-boxes'>
-                        <div className='hover-container flex flex-col items-center gap-2'>
-                            <img src={logo} alt={title} className='hover-img' />
-                            <h1 className='hover-title font-semibold text-[17px]'>{title}</h1>
-                            <p className='hover-description'>{description}</p>
+            <div>
+                <Slider {...sliderSettings}>
+                    {dataSets.map(({ id, title, description, logo }) => (
+                        <div key={id} className='flex flex-col gap-2 items-center p-4 marketing-boxes'>
+                            <div className='hover-container flex flex-col items-center gap-2'>
+                                <img src={logo} alt={title} className='hover-img' />
+                                <h1 className='hover-title font-semibold text-[17px]'>{title}</h1>
+                                <p className='hover-description'>{description}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </Slider>
+                    ))}
+                </Slider>
+            </div>
+
         </section>
     );
 }

@@ -87,7 +87,7 @@ const SliderSection = () => {
                 </Slider>
             </div>
             <div className='py-12 mb-[38px] md:mb-[90px]'>
-                <p className='text-3xl text-black font-semibold text-center'>
+                <p className='text-xl md:text-3xl text-black font-semibold text-center'>
                     Trusted to lead brands through complex and <br /> challenging transformations
                 </p>
             </div>

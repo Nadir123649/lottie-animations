@@ -9,8 +9,12 @@
     max-height: 108px !important;
 } */
 .marketing-boxes img {
-    width: 60px;
-    height: 60px;
+    max-width: 60px;
+    object-fit: contain;
+    width: 100%;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
 }
 
 
