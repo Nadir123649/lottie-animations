@@ -26,22 +26,10 @@ function Hero() {
             zIndex: 22,
 
         },
-        text: {
-            color: 'white',
-            textAlign: 'center',
-            animation: isJiggling ? 'jiggle 0.8s infinite' : 'none',
-        },
+
     };
 
-    const jiggleKeyframes = `
-        @keyframes jiggle {
-            0% { transform: translateY(0); }
-            25% { transform: translateY(-5px); }
-            50% { transform: translateY(5px); }
-            75% { transform: translateY(-3px); }
-            100% { transform: translateY(0); }
-        }
-    `;
+
 
     useEffect(() => {
         // Add jiggle effect after slide up completes
@@ -63,7 +51,6 @@ function Hero() {
 
     return (
         <section className="home-banner flex flex-col">
-            <style>{jiggleKeyframes}</style>
             <div style={{ position: 'relative', zIndex: 22 }}>
                 <Lottie
                     options={defaultOptions(logoAnimation)}
