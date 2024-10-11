@@ -54,10 +54,9 @@ function Hero() {
     };
 
     useEffect(() => {
-        // Simulate slide-up animation complete after 1 second
         const timer = setTimeout(() => {
             setIsSlideComplete(true);
-        }, 500); // Adjust time as needed
+        }, 500);
 
         return () => clearTimeout(timer);
     }, []);
