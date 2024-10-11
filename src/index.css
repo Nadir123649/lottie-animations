@@ -17,6 +17,8 @@ body {
     align-items: center;
     background: black;
     display: flex;
+    gap: 80px;
+    padding-top: 80px;
     min-height: 65vh;
     justify-content: center;
     margin-bottom: 17.8890876565vw;
@@ -71,63 +73,25 @@ main.finished .home-banner {
 }
 
 
-.contact-banner #contact-two svg {
-    transform: scale(2) !important
-}
-
-
-
-.contact-banner__umbrella {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    width: 100vw;
-    z-index: 1
-}
-
-.contact-banner__umbrella--mobile {
-    display: block
-}
-
-
-.contact-banner__umbrella--desktop {
-    display: none
-}
-
-
-.contact-banner__umbrella svg {
-    display: block;
-    transform: rotate(180deg)
-}
-
-.contact-banner__umbrella svg path {
-    fill: #f8f7ec
-}
-
-.contact-banner #contact-one {
-    pointer-events: none;
-    position: absolute;
-    transform: translate(-180px, -50px)
-}
-
-
-.contact-banner #contact-one svg {
-    height: 600px !important;
-    transform: scale(2) !important;
-    width: 600px !important
-}
-
-.contact-banner #contact-two {
-    pointer-events: none;
-    position: absolute;
-    transform: translate(130px, 220px);
-    z-index: 4
-}
-
 @media (max-width: 767px) {
-    .home-banner {
-        height: 460px;
-        min-height: 460px;
+
+
+    .hero-container-max {
+        gap: 50px !important;
+    }
+
+    .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        min-height: 100vh;
+        height: 100vh;
+        z-index: 2;
+        transform: translateY(50vh);
+        animation: slideUpTo5vh 2s ease-out forwards;
     }
 
 }
@@ -193,18 +157,15 @@ main.finished .home-banner {
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+
+
+@keyframes slideUpTo5vh {
+    0% {
+        transform: translateY(50vh);
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    100% {
+        transform: translateY(-50vh);
+        display: none;
     }
-}
-
-.fadeIn {
-    animation: fadeIn 1s ease-in-out forwards;
 }

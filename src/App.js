@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <div>
+     
         <AnimatedHeader isUmbrellaComplete={isUmbrellaComplete} handleAnimationComplete={handleAnimationComplete} />
         {isUmbrellaComplete && <div>
           <Innovative />
