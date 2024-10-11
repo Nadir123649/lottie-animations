@@ -50,7 +50,7 @@ function Hero() {
         text: {
             color: 'white',
             textAlign: 'center',
-            animation: isJiggling ? 'jiggle 0.6s infinite' : 'none', // Apply jiggle animation
+            animation: isJiggling ? 'jiggle 0.6s infinite' : 'none',
         },
     };
 

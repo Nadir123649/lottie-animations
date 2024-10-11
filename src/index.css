@@ -208,11 +208,3 @@ main.finished .home-banner {
 .fadeIn {
     animation: fadeIn 1s ease-in-out forwards;
 }
-
-.main-footer {
-    border-radius: 100% 100% 0 0;
-    background-color: black;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-}
