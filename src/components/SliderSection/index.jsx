@@ -42,7 +42,7 @@ const SliderSection = () => {
 
     const sliderSettings = {
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         speed: 5000,
@@ -54,21 +54,21 @@ const SliderSection = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             }
@@ -80,14 +80,14 @@ const SliderSection = () => {
             <div className='container client-logo-container mx-auto px-4 mb-[38px] md:mb-[90px]'>
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
-                        <div key={company.id} className='slide flex justify-center items-center py-2 logo-slide'>
+                        <div key={company.id} className='slide flex justify-center items-center  gap-2py-2 logo-slide'>
                             <img src={company.logo} alt={`Logo ${company.id}`} className='bg-[#F1F1F1] max-w-[430px] mx-auto w-full block' />
                         </div>
                     ))}
                 </Slider>
             </div>
-            <div className='py-12 mb-[38px] md:mb-[90px]'>
-                <p className='text-xl md:text-3xl text-black font-semibold text-center'>
+            <div className='py-5 md:py-12 mb-[8px] md:mb-[90px]'>
+                <p className='text-lg md:text-3xl text-black font-semibold text-center'>
                     Trusted to lead brands through complex and <br /> challenging transformations
                 </p>
             </div>
@@ -96,24 +96,18 @@ const SliderSection = () => {
                 <Lottie
                     animationData={arrowAnimation}
                     loop={false}
-                    // style={{ width: 300, height: 300 }} 
-                    className='absolute  arrow-two'
+                    className='absolute arrow-two'
                     keepLastFrame={true}
                 />
-
             )}
-
             {hasAnimated && (
                 <Lottie
                     animationData={curlyarrowAnimation}
                     loop={false}
-                    // style={{ width: 600, height: 300 }} 
                     className='absolute right-[-100px] bottom-[-30px] arrow-one'
                     keepLastFrame={true}
                 />
             )}
-
-
         </section>
     );
 };
