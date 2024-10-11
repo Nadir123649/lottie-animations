@@ -16,45 +16,71 @@
     min-height: 100px;
     max-height: 100px;
 }
-
-
 .hover-container {
     position: relative;
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
     cursor: pointer;
 }
 
 .hover-img,
 .hover-title {
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease-in-out;
 }
 
 .hover-description {
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.hover-container p {
-    text-align: center;
+    transform: translateY(15px); /* Slightly increased to enhance the transition */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smoother description transition */
 }
 
 .hover-container:hover .hover-img {
-    transform: translateY(-10px);
-    opacity: 0.9;
+    transform: translateY(-12px); /* More noticeable movement */
+    opacity: 1; /* Make it fully visible */
 }
 
 .hover-container:hover .hover-title {
-    transform: translateY(-10px);
-    opacity: 0.9;
+    transform: translateY(-12px);
+    opacity: 1; /* Full opacity */
 }
 
 .hover-container:hover .hover-description {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0); /* Bring it to its original position smoothly */
 }
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .hover-container {
+        padding: 1rem;
+    }
+
+    .hover-img {
+        width: 80%; /* Adjust image size on smaller screens */
+    }
+
+    .hover-title {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .hover-description {
+        font-size: 14px; /* Smaller text for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hover-container {
+        padding: 0.5rem;
+    }
+
+    .hover-title {
+        font-size: 14px;
+    }
+
+    .hover-description {
+        font-size: 12px;
+    }
+}
 /* arrow animations */
 
 .graph__wrapper {
