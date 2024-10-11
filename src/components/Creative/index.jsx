@@ -1,32 +1,40 @@
 import React, { useEffect, useRef, useState } from 'react';
-import brandinglogo from '../../images/branding.png';
-import productlogo from '../../images/product creation.png';
+import { Player } from '@lottiefiles/react-lottie-player';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import brandinglogo from '../../images/mark-branding.png';
+import productlogo from '../../images/mark-product.png';
 import developmentlogo from '../../images/app development.png';
-import marketinglogo from '../../images/digital martketing.png';
+import marketinglogo from '../../images/mark-marketing.png';
 import advertisinglogo from '../../images/advertising.png';
+import arrowAnimation from '../../lottie-animation/stroke-animation/data1.json';
 
 function CreativeSection() {
-    const [isVisible, setIsVisible] = useState(false);
-        const [hasAnimated, setHasAnimated] = useState(false);
-
-    const handleScroll = () => {
-        const element = document.getElementById("needs-section");
-        if (element && !hasAnimated) {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= window.innerHeight * 0.75) {
-                setIsVisible(true);
-                setHasAnimated(true);
-            }
-        }
-    };
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const sectionRef = useRef(null);
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true); 
+                }
+            },
+            { threshold: 0.5 } 
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
         };
-    }, [hasAnimated]);
- 
+    }, [hasAnimated]); 
+
     const dataSets = [
         {
             id: 1,
@@ -60,49 +68,70 @@ function CreativeSection() {
         },
     ];
 
-    return (
-    
-            <section id='needs-section'  className=' creative-box-section py-40 relative'>
-                <div className="graph__wrapper">
-                    <svg width="315px" height="107px" viewBox="0 0 315 107" version="1.1" style={{ overflow: 'visible' }}>
-                        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                            <path
-                                id="Path-1"
-                                className={`path ${isVisible ? 'start-animation' : ''}`}
-                                fill="none"
-                                stroke="black" 
-                                strokeWidth="5"
-                                strokeLinejoin="round"
-                                strokeMiterlimit="10"
-                                d="M1.4,2.1c0,0,86,57,211.5,41.5s172.5-24.5,289,81"
-                            />
-                            <path className="dashed" fill="none" stroke="white" strokeWidth="8" strokeLinejoin="round" strokeMiterlimit="10" d="M1.4,2.1c0,0,86,57,211.5,41.5s172.5-24.5,289,81"/>   
-                            <polyline id="arrow" className={isVisible ? 'animate-arrow' : ''} points="0,-9 18,0 0,9 5,0" fill="black">
-                                <animateMotion rotate="auto" begin={isVisible ? "0s" : "1s"} dur="1.6s" repeatCount="1" fill="freeze">
-                                    <mpath xlinkHref="#Path-1" />
-                                </animateMotion>
-                            </polyline>
-                        </g>
-                    </svg>
-                </div>
+    const sliderSettings = {
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 500,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    };
 
-                <h1 className='font-semibold text-[28px] text-center max-w-[640px] mx-auto pb-20'>
-                    Creative solutions. Exceptional results.
-                    Assisting brands succeed through every challenge.
-                </h1>
-                <div className='flex justify-between'>
-                    {dataSets.map(({ id, title, description, logo }) => (
-                        <div key={id} className='flex flex-col gap-2 items-center p-4 marketing-boxes max-w-[400px]'>
-                            <div className='hover-container flex flex-col items-center gap-2'>
-                                <img src={logo} alt={title} className='hover-img' />
-                                <h1 className='hover-title'>{title}</h1>
-                                <p className='hover-description'>{description}</p>
-                            </div>
+    return (
+        <section ref={sectionRef} id='needs-section' className='creative-box-section py-[60px] relative'>
+            {hasAnimated && (
+                <Player
+                    autoplay
+                    loop={false}
+                    src={arrowAnimation}
+                    // style={{ height: '600px', width: '600px' }}
+                    className='absolute  bottom-[-260px] right-0 arrow-three'
+                    keepLastFrame={true} 
+                />
+            )}
+
+            <h1 className='font-semibold text-[20px] md:text-[28px] text-center max-w-[640px] mx-auto  description-title'>
+                Creative solutions. Exceptional results.
+                Assisting brands succeed through every challenge.
+            </h1>
+
+            <Slider {...sliderSettings}>
+                {dataSets.map(({ id, title, description, logo }) => (
+                    <div key={id} className='flex flex-col gap-2 items-center p-4 marketing-boxes'>
+                        <div className='hover-container flex flex-col items-center gap-2'>
+                            <img src={logo} alt={title} className='hover-img' />
+                            <h1 className='hover-title font-semibold text-[17px]'>{title}</h1>
+                            <p className='hover-description'>{description}</p>
                         </div>
-                    ))}
-                </div>
-            </section>
-    
+                    </div>
+                ))}
+            </Slider>
+        </section>
     );
 }
 
