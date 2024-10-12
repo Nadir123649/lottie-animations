@@ -154,7 +154,7 @@ main.finished .home-banner {
         order: 2;
     }
 
-    .layer {
+    /* .layer {
         position: absolute;
         top: 0;
         left: 0;
@@ -167,6 +167,11 @@ main.finished .home-banner {
         transform: translateY(50vh);
         transition: all 1s ease;
         animation: slideUpTo5vh 3s ease-out forwards;
+    } */
+
+    .mobile-home-banner {
+        min-height: 100vh;
+        animation: slideDown 2s forwards;
     }
 
 }
@@ -234,21 +239,12 @@ main.finished .home-banner {
     }
 }
 
-@keyframes slideUpTo5vh {
+@keyframes slideDown {
     0% {
-        transform: translateY(50vh);
-        transition: all 1s ease;
+        min-height: 100vh;
     }
 
     100% {
-        transform: translateY(-50vh);
-        display: none;
-        transition: all 1s ease;
+        min-height: 50vh;
     }
-}
-
-.fade-up {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
