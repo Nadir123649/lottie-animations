@@ -32,7 +32,7 @@ function Innovative() {
     return (
         <section
             ref={sectionRef}
-            className={`box fadeIn relative flex justify-center items-center flex-col pt-0 px-3 md:px-5 md:pt-0 pb-20 mt-[-40px] ${hasAnimated ? 'fade-up' : ''}`}
+            className={`box fadeIn relative flex justify-center items-center flex-col pt-0 px-3 mt-[20px] md:px-5 md:pt-0 pb-20 md:mt-[-40px] ${hasAnimated ? 'fade-up' : ''}`}
         >
             <h1 className="text-center text-lg md:text-2xl font-normal leading-normal md:leading-[38px]">
                 We do everything imaginable in the world of creative <br className="hidden md:block" />
