@@ -70,10 +70,6 @@ function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
 
             {isUmbrellaComplete && (
                 <>
-                    {/* Desktop/Mobile SVG based on the isMobile state */}
-                    {!isMobile && (
-                        <div className="layer overflow-hidden"></div>
-                    )}
                     <Hero />
                 </>
             )}
