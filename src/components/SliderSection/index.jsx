@@ -86,7 +86,7 @@ const SliderSection = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1.2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     speed: 1000,          // Keeping consistent speed across breakpoints
                     autoplaySpeed: 3000    // Slowing down for mobile users as well
