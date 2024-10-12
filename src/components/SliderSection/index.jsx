@@ -106,9 +106,14 @@ const SliderSection = () => {
             <div className='container client-logo-container mx-auto px-4 mb-[48px] mt-[20px] md:mb-[20px] md:mt-[20px]'>
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
-                        <div key={company.id} className='slide flex justify-center items-center  gap-2py-2 logo-slide'>
-                            <img src={company.logo} alt={`Logo ${company.id}`} className='max-w-[160px]  md:max-w-[234px] mx-auto w-full block h-auto min-h-[63px] max-h-[63px] object-contain' />
+                        <div key={company.id} className='slide flex justify-center items-center py-2 logo-slide'>
+                            <img
+                                src={company.logo}
+                                alt={`Logo ${company.id}`}
+                                className='w-[160px] h-[63px] md:w-[234px] md:h-[80px] mx-auto block object-contain'
+                            />
                         </div>
+
                     ))}
                 </Slider>
             </div>
