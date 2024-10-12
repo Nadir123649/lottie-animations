@@ -3,13 +3,28 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import LovLogo from '../../images/loewe logo.png';
+import rhodelogo from '../../images/rhodelogo.png';
+import maylogo from '../../images/maylogo.png';
+import mcdo from '../../images/mcdo.png';
+import bmdord from '../../images/bmdord.png';
+import drewlogo from '../../images/drewlogo.png';
+import twentytwo from '../../images/twentytwo.png';
+import lavas from '../../images/lavas.png';
+import fila from '../../images/fila.png';
 import Lottie from 'lottie-react';
 import arrowAnimation from '../../lottie-animation/stroke-animation/data2.json';
 import curlyarrowAnimation from '../../lottie-animation/stroke-animation/data4.json';
 
 const companiesdata = [
     { id: 1, logo: LovLogo },
-    { id: 2, logo: LovLogo },
+    { id: 2, logo: rhodelogo },
+    { id: 3, logo: maylogo },
+    { id: 4, logo: mcdo },
+    { id: 5, logo: bmdord },
+    { id: 6, logo: drewlogo },
+    { id: 7, logo: twentytwo },
+    { id: 8, logo: lavas },
+    { id: 9, logo: fila },
 ];
 
 const SliderSection = () => {
@@ -42,7 +57,7 @@ const SliderSection = () => {
 
     const sliderSettings = {
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         speed: 5000,
@@ -54,7 +69,7 @@ const SliderSection = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                 }
             },
@@ -81,7 +96,7 @@ const SliderSection = () => {
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
                         <div key={company.id} className='slide flex justify-center items-center  gap-2py-2 logo-slide'>
-                            <img src={company.logo} alt={`Logo ${company.id}`} className='max-w-[430px] mx-auto w-full block' />
+                            <img src={company.logo} alt={`Logo ${company.id}`} className='max-w-[234px] mx-auto w-full block h-auto min-h-[63px] max-h-[63px] object-contain' />
                         </div>
                     ))}
                 </Slider>

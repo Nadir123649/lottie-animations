@@ -12,7 +12,7 @@ function Footer() {
             <div className="main-footer  bg-black relative px-5 pb-[5px]">
                 <div className="container  flex flex-col md:flex-row  justify-between items-center">
                     <p className="order-one text-white text-xs mb-0 pb-2 pt-2 md:pb-0 md:pt-3">
-                        © Constantinougroup. 2024. All rights reserved
+                        ©Constantinou Group. 2024. All rights reserved
                     </p>
                     <img src={umbrella} alt="umbrella" className="max-w-[80px] order-two" />
                     <p className="text-white text-sm mb-0 order-three pt-3 md:pb-0 md:pt-3">
