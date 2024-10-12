@@ -110,7 +110,7 @@ const SliderSection = () => {
                             <img
                                 src={company.logo}
                                 alt={`Logo ${company.id}`}
-                                className='w-[160px] h-[63px] md:w-[234px] md:h-[80px] mx-auto block object-contain'
+                                className='w-[160px] h-[63px] md:w-[234px] md:h-[60px] min-h-[60px] mx-auto block object-contain'
                             />
                         </div>
 
