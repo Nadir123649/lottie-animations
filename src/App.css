@@ -12,37 +12,45 @@
     max-height: 100px;
     margin-bottom: 10px;
 }
+
 .hover-container {
     position: relative;
     text-align: center;
-    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    /* Smoother transition */
     cursor: pointer;
 }
 
-.hover-img, 
+.hover-img,
 .hover-title {
     transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.2s ease-in-out;
 }
 
 .hover-description {
     opacity: 0;
-    transform: translateY(15px); /* Slightly increased to enhance the transition */
-    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smoother description transition */
+    transform: translateY(15px);
+    /* Slightly increased to enhance the transition */
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    /* Smoother description transition */
 }
 
 .hover-container:hover .hover-img {
-    transform: translateY(-12px); /* More noticeable movement */
-    opacity: 1; /* Make it fully visible */
+    transform: translateY(-12px);
+    /* More noticeable movement */
+    opacity: 1;
+    /* Make it fully visible */
 }
 
 .hover-container:hover .hover-title {
     transform: translateY(-12px);
-    opacity: 1; /* Full opacity */
+    opacity: 1;
+    /* Full opacity */
 }
 
 .hover-container:hover .hover-description {
     opacity: 1;
-    transform: translateY(0); /* Bring it to its original position smoothly */
+    transform: translateY(0);
+    /* Bring it to its original position smoothly */
 }
 
 /* Responsive design */
@@ -52,15 +60,18 @@
     }
 
     .hover-img {
-        width: 80%; /* Adjust image size on smaller screens */
+        width: 80%;
+        /* Adjust image size on smaller screens */
     }
 
     .hover-title {
-        font-size: 16px; /* Adjust font size for mobile */
+        font-size: 16px;
+        /* Adjust font size for mobile */
     }
 
     .hover-description {
-        font-size: 14px; /* Smaller text for mobile screens */
+        font-size: 14px;
+        /* Smaller text for mobile screens */
     }
 }
 
@@ -77,6 +88,7 @@
         font-size: 12px;
     }
 }
+
 /* arrow animations */
 
 .graph__wrapper {
@@ -175,9 +187,8 @@
 
     .arrow-two {
         width: 100px;
-        height: 300px;
-        bottom: 120px;
-
+        height: 322px;
+        bottom: 17px;
     }
 
     .arrow-three {

@@ -61,14 +61,14 @@ const SliderSection = () => {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             }
@@ -86,8 +86,8 @@ const SliderSection = () => {
                     ))}
                 </Slider>
             </div>
-            <div className='py-5 md:py-12 mb-[8px] md:mb-[90px]'>
-                <p className='text-lg md:text-3xl text-black font-semibold text-center'>
+            <div className='pt-5 pb-0 md:pt-12 md:pb-12 mb-[0px] md:mb-[90px] px-2 md:px-0'>
+                <p className='text-lg md:text-3xl text-black font-normal text-center'>
                     Trusted to lead brands through complex and <br /> challenging transformations
                 </p>
             </div>
@@ -104,7 +104,7 @@ const SliderSection = () => {
                 <Lottie
                     animationData={curlyarrowAnimation}
                     loop={false}
-                    className='absolute right-[-100px] bottom-[-30px] arrow-one'
+                    className='absolute right-[-100px] bottom-[-10px] arrow-one'
                     keepLastFrame={true}
                 />
             )}
