@@ -199,11 +199,12 @@
     }
 
     .arrow-three {
-        top: 103%;
-        width: 368px;
+        top: 99%;
+        width: 309px;
         overflow: hidden !important;
-        height: 87px;
+        height: 78px;
         bottom: -93px;
+
     }
 
     .arrow-four {
