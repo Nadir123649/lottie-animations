@@ -5,9 +5,10 @@ import FooterBg from "../../images/Asset-12.png";
 function Footer() {
     return (
         <footer className="relative">
-            <div className="relative ">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="none">
-                    <path d="M0 100 C 480 0, 960 0, 1440 100 L 1440 200 L 0 200 Z" fill="#000000" />
+
+            <div className="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 253.9">
+                    <path d="M0,253.9V0C222.12,91.46,465.34,141.9,720.31,141.9S1217.96,91.46,1440,0v253.9H0Z" fill="#000000"></path>
                 </svg>
             </div>
             <div className="main-footer relative flex flex-col md:flex-row bg-black justify-between items-center px-5 pb-[5px]">
