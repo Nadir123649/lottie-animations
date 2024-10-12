@@ -71,8 +71,8 @@ function CreativeSection() {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 10000,
-        speed: 1000,
+        autoplaySpeed: 3000,  // Slowed down to 3 seconds per slide
+        speed: 1000,          // Match the transition speed to autoplay for smoothness
         dots: false,
         arrows: false,
         responsive: [
@@ -81,6 +81,8 @@ function CreativeSection() {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                    autoplaySpeed: 3000, // Ensure consistency across breakpoints
+                    speed: 1000
                 }
             },
             {
@@ -88,6 +90,8 @@ function CreativeSection() {
                 settings: {
                     slidesToShow: 1.35,
                     slidesToScroll: 1,
+                    autoplaySpeed: 3000, // Adjust for smaller screens
+                    speed: 1000
                 }
             },
             {
@@ -95,12 +99,13 @@ function CreativeSection() {
                 settings: {
                     slidesToShow: 1.79,
                     slidesToScroll: 1,
-                    autoplaySpeed: 30000,
-                    speed: 1000,
+                    autoplaySpeed: 3000,  // Keep consistent, or slow down to 30s if desired
+                    speed: 1000,          // Same transition speed for smoother effects
                 }
             }
         ]
     };
+
 
     return (
         <section ref={sectionRef} id='needs-section' className='creative-box-section pt-[38px] pb-[0px] md:pt-[140px] md:pb-[10px] relative'>
