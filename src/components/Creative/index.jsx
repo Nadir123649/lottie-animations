@@ -93,7 +93,7 @@ function CreativeSection() {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1.6,
+                    slidesToShow: 1.8,
                     slidesToScroll: 1,
                     autoplaySpeed: 30000,
                     speed: 1000,
@@ -103,7 +103,7 @@ function CreativeSection() {
     };
 
     return (
-        <section ref={sectionRef} id='needs-section' className='creative-box-section pt-[80px] pb-[0px] md:pt-[140px] md:pb-[10px] relative'>
+        <section ref={sectionRef} id='needs-section' className='creative-box-section pt-[30px] pb-[0px] md:pt-[140px] md:pb-[10px] relative'>
             <h1 className='font-semibold text-[18px] md:text-[28px] text-center max-w-[640px] mx-auto  description-title'>
                 Creative solutions. Exceptional results.
                 Assisting brands succeed through every challenge.

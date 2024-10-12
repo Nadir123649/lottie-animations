@@ -82,7 +82,7 @@ const SliderSection = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1.5,
+                    slidesToShow: 1.2,
                     slidesToScroll: 1,
                 }
             }
@@ -91,9 +91,9 @@ const SliderSection = () => {
 
     return (
         <section ref={sectionRef} className='py-10 md:pt-5 relative'>
-            <div className='pt-0 pb-0 md:pt-12 md:pb-12 mb-[0px] md:mb-[30px] px-2 md:px-0'>
+            <div className='pt-0 pb-0 md:pt-12 md:pb-12 mb-[40px] md:mb-[30px] px-2 md:px-0'>
                 <p className='font-semibold text-[18px] md:text-[28px] text-center max-w-[640px] mx-auto  description-title'>
-                    Trusted to lead brands through complex and <br /> challenging transformations
+                    Trusted to lead brands through complex and <br className='hidden md:block' /> challenging transformations
                 </p>
             </div>
 
@@ -101,7 +101,7 @@ const SliderSection = () => {
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
                         <div key={company.id} className='slide flex justify-center items-center  gap-2py-2 logo-slide'>
-                            <img src={company.logo} alt={`Logo ${company.id}`} className='max-w-[234px] mx-auto w-full block h-auto min-h-[63px] max-h-[63px] object-contain' />
+                            <img src={company.logo} alt={`Logo ${company.id}`} className='max-w-[160px]  md:max-w-[234px] mx-auto w-full block h-auto min-h-[63px] max-h-[63px] object-contain' />
                         </div>
                     ))}
                 </Slider>
