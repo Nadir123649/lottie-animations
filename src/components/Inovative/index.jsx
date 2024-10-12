@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import rightarrowAnimation from '../../lottie-animation/stroke-animation/data3.json';
-import leftarrowAnimation from '../../lottie-animation/stroke-animation/data5.json';
 
 
 function Innovative() {

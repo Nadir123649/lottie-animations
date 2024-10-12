@@ -59,17 +59,19 @@ const SliderSection = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 5000,
+        speed: 1000,            // Reduced transition time for smoother sliding
+        autoplaySpeed: 3000,    // Increased autoplay speed to 3 seconds between slides
         dots: false,
         arrows: false,
-        autoplaySpeed: 300,
-        cssEase: "linear",
+        cssEase: "linear",      // Linear easing for a consistent smooth effect
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 1,
+                    speed: 1000,
+                    autoplaySpeed: 3000
                 }
             },
             {
@@ -77,6 +79,8 @@ const SliderSection = () => {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                    speed: 1000,
+                    autoplaySpeed: 3000
                 }
             },
             {
@@ -84,6 +88,8 @@ const SliderSection = () => {
                 settings: {
                     slidesToShow: 1.2,
                     slidesToScroll: 1,
+                    speed: 1000,          // Keeping consistent speed across breakpoints
+                    autoplaySpeed: 3000    // Slowing down for mobile users as well
                 }
             }
         ]
