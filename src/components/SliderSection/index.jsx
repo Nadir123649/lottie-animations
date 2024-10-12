@@ -86,7 +86,7 @@ const SliderSection = () => {
                     ))}
                 </Slider>
             </div>
-            <div className='pt-5 pb-0 md:pt-12 md:pb-12 mb-[0px] md:mb-[90px] px-2 md:px-0'>
+            <div className='pt-0 pb-0 md:pt-12 md:pb-12 mb-[0px] md:mb-[90px] px-2 md:px-0'>
                 <p className='text-lg md:text-3xl text-black font-normal text-center'>
                     Trusted to lead brands through complex and <br /> challenging transformations
                 </p>
