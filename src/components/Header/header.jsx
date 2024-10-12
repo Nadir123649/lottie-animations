@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Lottie from 'react-lottie';
 import umbrellaAnimation from '../../lottie-animation/Desktop.json';
+import mobileUmbrellaAnimation from '../../lottie-animation/mobile.json'; // Assuming you have a separate mobile animation
 import Hero from '../Hero';
+
 function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
+    const [isMobile, setIsMobile] = useState(false); // State to track if it's mobile or not
+
+    // Function to detect screen width and update isMobile state
+    const detectScreenSize = () => {
+        setIsMobile(window.innerWidth <= 768); // 768px threshold for mobile
+    };
+
+    useEffect(() => {
+        detectScreenSize(); // Check screen size on initial load
+        window.addEventListener('resize', detectScreenSize); // Listen for screen resizing
+        return () => {
+            window.removeEventListener('resize', detectScreenSize); // Cleanup event listener on unmount
+        };
+    }, []);
+
     const defaultOptions = (animationData) => ({
         loop: false, // Set to false for both animations to not loop
         autoplay: true,
@@ -12,7 +29,7 @@ function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
         },
     });
 
-    const [animationSpeed, setAnimationSpeed] = React.useState(0.6);
+    const [animationSpeed, setAnimationSpeed] = useState(0.6);
 
     const styles = {
         umbrellaContainer: {
@@ -22,32 +39,11 @@ function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
             width: '100vw',
             height: '100vh',
         },
-        logoContainer: {
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: 'black',
-            height: '80vh',
-            marginTop: '10px',
-        },
         lottie: {
             width: '100%',
             height: '100%',
             maxWidth: '100vw',
             maxHeight: '100vh',
-        },
-        logo: {
-            width: 'auto',
-            height: '50px', // Decrease the height to make the logo smaller
-            maxWidth: '120px',
-            maxHeight: '100%',
-        },
-        text: {
-            color: 'white', // Change text color to white for better visibility
-            textAlign: 'center', // Center align the text
-            marginTop: '10px', // Add margin between logo and text
-            fontSize: '16px', // Adjust font size as needed
         },
     };
 
@@ -55,9 +51,10 @@ function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
         <div className="App">
             {!isUmbrellaComplete && (
                 <div>
-                    <div id='mobile' style={styles.umbrellaContainer}>
+                    {/* Conditionally render based on screen size */}
+                    <div style={styles.umbrellaContainer}>
                         <Lottie
-                            options={defaultOptions(umbrellaAnimation)}
+                            options={defaultOptions(isMobile ? mobileUmbrellaAnimation : umbrellaAnimation)} // Use mobile or desktop animation
                             speed={animationSpeed}
                             style={styles.lottie}
                             eventListeners={[
@@ -73,17 +70,20 @@ function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
 
             {isUmbrellaComplete && (
                 <>
-                    <div class="layer overflow-hidden">
-                        <div className="home-banner__umbrella home-banner__umbrella--mobile">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 64.61">
-                                <path fill="#000000" d="m390,0H0v64.61c60.14-17.8,126.01-27.61,195.06-27.61s134.84,9.8,194.94,27.58V0Z"></path>
-                            </svg>
+                    {/* Desktop/Mobile SVG based on the isMobile state */}
+                    {!isMobile && (
+                        <div className="layer overflow-hidden">
+                            <div className="home-banner__umbrella home-banner__umbrella--desktop">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 64.61">
+                                    <path fill="#000000" d="m390,0H0v64.61c60.14-17.8,126.01-27.61,195.06-27.61s134.84,9.8,194.94,27.58V0Z"></path>
+                                </svg>
+                            </div>
                         </div>
-                    </div>
+                    )}
                     <Hero />
                 </>
             )}
-        </div >
+        </div>
     );
 }
 

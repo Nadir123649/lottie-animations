@@ -80,7 +80,7 @@ body {
 .home-banner {
     align-items: center;
     background: black;
-    padding-top: 34px;
+    padding-top: 40px;
     min-height: 50vh;
     margin-bottom: 17.8890876565vw;
     position: relative;
@@ -171,7 +171,7 @@ main.finished .home-banner {
         line-height: 38px;
         max-width: 500px;
         width: 100%;
-        padding-top: 100px;
+        padding-top: 120px;
         margin: 0 auto;
     }
 }
