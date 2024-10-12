@@ -11,11 +11,11 @@ function Footer() {
             </div>
             <div className="main-footer  bg-black relative px-5 pb-[5px]">
                 <div className="container  flex flex-col md:flex-row  justify-between items-center">
-                    <p className="text-white text-sm mb-0 order-3 md:order-[0]  md:pb-0 pt-3">
+                    <p className="order-one text-white text-sm mb-0 pb-2 pt-2 md:pb-0 md:pt-3">
                         © Constantinou. 2024. All rights reserved
                     </p>
-                    <img src={umbrella} alt="umbrella" className="max-w-[80px] order-1 md:order-[0]" />
-                    <p className="text-white text-sm mb-0 order-2 md:order-[0] md:pb-0 pt-3">
+                    <img src={umbrella} alt="umbrella" className="max-w-[80px] order-two" />
+                    <p className="text-white text-sm mb-0 order-three pt-3 md:pb-0 md:pt-3">
                         <a
                             href="mailto:info@constantinougroup.com"
                             className="text-white text-sm font-normal no-underline"
