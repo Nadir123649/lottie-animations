@@ -29,7 +29,7 @@ function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
         },
     });
 
-    const [animationSpeed, setAnimationSpeed] = useState(2);
+    const [animationSpeed, setAnimationSpeed] = useState(1.4);
 
     const styles = {
         umbrellaContainer: {
