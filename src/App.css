@@ -15,19 +15,19 @@
 .hover-container {
     position: relative;
     text-align: center;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
     cursor: pointer;
 }
 
 .hover-img, 
 .hover-title {
-    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease-in-out;
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.2s ease-in-out;
 }
 
 .hover-description {
     opacity: 0;
     transform: translateY(15px); /* Slightly increased to enhance the transition */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smoother description transition */
+    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smoother description transition */
 }
 
 .hover-container:hover .hover-img {

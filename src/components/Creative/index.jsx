@@ -73,8 +73,8 @@ function CreativeSection() {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
-        speed: 500,
+        autoplaySpeed: 5000,
+        speed: 1000,
         dots: false,
         arrows: false,
         responsive: [
@@ -109,7 +109,6 @@ function CreativeSection() {
                     autoplay
                     loop={false}
                     src={arrowAnimation}
-                    // style={{ height: '600px', width: '600px' }}
                     className='absolute  bottom-[-260px] right-0 arrow-three'
                     keepLastFrame={true}
                 />
