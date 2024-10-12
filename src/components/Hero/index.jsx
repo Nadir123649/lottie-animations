@@ -8,8 +8,8 @@ function Hero() {
     const [isJiggling, setIsJiggling] = useState(false);
 
     const defaultOptions = (animationData) => ({
-        loop: false, // Set to false for both animations to not loop
-        autoplay: isSlideComplete, // Start Lottie only after slide animation
+        loop: false,
+        autoplay: isSlideComplete,
         animationData: animationData,
         rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice',
@@ -20,7 +20,7 @@ function Hero() {
     const styles = {
         lottie: {
             width: '100%',
-            maxWidth: '230px',
+            maxWidth: '200px',
             height: 'auto',
             position: 'relative',
             zIndex: 22,
@@ -30,18 +30,15 @@ function Hero() {
     };
 
 
-
     useEffect(() => {
-        // Add jiggle effect after slide up completes
         const timer = setTimeout(() => {
             setIsSlideComplete(true);
             setIsJiggling(true);
-        }, 500); // Adjust slide up time as needed
+        }, 500);
 
-        // Stop jiggling after a certain duration
         const jiggleTimer = setTimeout(() => {
             setIsJiggling(false);
-        }, 2000); // Duration of the jiggle effect
+        }, 2000);
 
         return () => {
             clearTimeout(timer);
@@ -50,7 +47,7 @@ function Hero() {
     }, []);
 
     return (
-        <section className="home-banner flex flex-col">
+        <section className="home-banner">
             <div style={{ position: 'relative', zIndex: 22 }}>
                 <Lottie
                     options={defaultOptions(logoAnimation)}
