@@ -49,7 +49,6 @@ function Innovative() {
                     keepLastFrame={true}
                 />
             )}
-
             <p className="text-center text-sm md:text-lg font-[400] leading-normal mt-[30px] md:mt-[50px] max-w-full md:max-w-[855px] w-full">
                 Our core focus is bringing your brand to life in fresh, unorthodox, and often
                 provocative ways. With a team of some of the brightest, most passionate, and
@@ -57,7 +56,6 @@ function Innovative() {
                 to express your brand’s values and personality through every channel that makes
                 sense—and even a few that don’t!
             </p>
-
             {hasAnimated && (
                 <Player
                     autoplay
