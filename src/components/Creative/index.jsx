@@ -88,14 +88,14 @@ function CreativeSection() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1.5,
+                    slidesToShow: 1.35,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1.77,
+                    slidesToShow:  1.25,    
                     slidesToScroll: 1,
                 }
             }
