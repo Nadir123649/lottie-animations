@@ -95,7 +95,7 @@ function CreativeSection() {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow:  1.6,    
+                    slidesToShow: 1.6,
                     slidesToScroll: 1,
                     autoplaySpeed: 30000,
                     speed: 1000,
@@ -105,7 +105,7 @@ function CreativeSection() {
     };
 
     return (
-        <section ref={sectionRef} id='needs-section' className='creative-box-section pt-[60px] pb-[0px] md:pt-[60px] md:pb-[60px] relative'>
+        <section ref={sectionRef} id='needs-section' className='creative-box-section pt-[80px] pb-[0px] md:pt-[60px] md:pb-[60px] relative'>
             {hasAnimated && (
                 <Player
                     autoplay
