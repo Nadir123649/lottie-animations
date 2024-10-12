@@ -189,6 +189,7 @@
         width: 100px;
         height: 322px;
         bottom: 17px;
+        display: none;
     }
 
     .arrow-three {
@@ -200,14 +201,15 @@
 
     .arrow-four {
         width: 100px;
-        height: 300px;
-        bottom: -140px;
-
+        height: auto;
+        bottom: -27px;
+        left: 133px;
     }
 
     .arrow-five {
-        width: 150px;
-        height: 300px;
-        bottom: -140px;
+        width: 150px !important;
+        height: auto;
+        top: -192px;
+        right: -6px;
     }
 }
