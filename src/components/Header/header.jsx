@@ -72,13 +72,7 @@ function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
                 <>
                     {/* Desktop/Mobile SVG based on the isMobile state */}
                     {!isMobile && (
-                        <div className="layer overflow-hidden">
-                            <div className="home-banner__umbrella home-banner__umbrella--desktop">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 64.61">
-                                    <path fill="#000000" d="m390,0H0v64.61c60.14-17.8,126.01-27.61,195.06-27.61s134.84,9.8,194.94,27.58V0Z"></path>
-                                </svg>
-                            </div>
-                        </div>
+                        <div className="layer overflow-hidden"></div>
                     )}
                     <Hero />
                 </>
