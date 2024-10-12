@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 
-/* .client-logo-container .slide img {
-    width: 400px !important;
-    height: 108px !important;
-    max-height: 108px !important;
-} */
 .marketing-boxes img {
     max-width: 100px;
     object-fit: contain;
