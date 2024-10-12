@@ -77,7 +77,7 @@ const SliderSection = () => {
 
     return (
         <section ref={sectionRef} className='py-20 relative'>
-            <div className='container client-logo-container mx-auto px-4 mb-[38px] md:mb-[90px]'>
+            <div className='container client-logo-container mx-auto px-4 mb-[48px] mt-[20px] md:mb-[90px] md:mt-[0px]'>
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
                         <div key={company.id} className='slide flex justify-center items-center  gap-2py-2 logo-slide'>

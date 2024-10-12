@@ -192,9 +192,10 @@
     }
 
     .arrow-three {
-        width: 300px;
+        width: 450px;
+        overflow: hidden !important;
         height: 100px;
-        bottom: -40px;
+        bottom: -60px;
     }
 
     .arrow-four {

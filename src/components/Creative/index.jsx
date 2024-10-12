@@ -103,7 +103,7 @@ function CreativeSection() {
     };
 
     return (
-        <section ref={sectionRef} id='needs-section' className='creative-box-section py-[60px] relative'>
+        <section ref={sectionRef} id='needs-section' className='creative-box-section pt-[60px] pb-[0px] md:pt-[60px] md:pb-[60px] relative'>
             {hasAnimated && (
                 <Player
                     autoplay
