@@ -51,7 +51,6 @@ function AnimatedHeader({ isUmbrellaComplete, handleAnimationComplete }) {
         <div className="App">
             {!isUmbrellaComplete && (
                 <div>
-                    {/* Conditionally render based on screen size */}
                     <div style={styles.umbrellaContainer}>
                         <Lottie
                             options={defaultOptions(isMobile ? mobileUmbrellaAnimation : umbrellaAnimation)} // Use mobile or desktop animation

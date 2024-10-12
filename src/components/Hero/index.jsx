@@ -15,8 +15,6 @@ function Hero() {
             preserveAspectRatio: 'xMidYMid slice',
         },
     });
-
-    // Slide-up animation CSS
     const styles = {
         lottie: {
             width: '100%',
@@ -24,11 +22,8 @@ function Hero() {
             height: 'auto',
             position: 'relative',
             zIndex: 22,
-
         },
-
     };
-
 
     useEffect(() => {
         const timer = setTimeout(() => {
