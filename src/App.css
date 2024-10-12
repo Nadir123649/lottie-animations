@@ -148,15 +148,19 @@
 .arrow-three {
     width: 700px;
     height: 400px;
-    top: 65%;  
-    left: 30%;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .arrow-four {
     width: 200px;
     height: 300px;
-    bottom: -125px;
-    left: 23%;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .arrow-five {
