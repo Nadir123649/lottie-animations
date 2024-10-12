@@ -76,7 +76,7 @@ const SliderSection = () => {
     };
 
     return (
-        <section ref={sectionRef} className='py-20 relative'>
+        <section ref={sectionRef} className='py-10 md:pt-20 relative'>
             <div className='container client-logo-container mx-auto px-4 mb-[48px] mt-[20px] md:mb-[90px] md:mt-[0px]'>
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
@@ -104,7 +104,7 @@ const SliderSection = () => {
                 <Lottie
                     animationData={curlyarrowAnimation}
                     loop={false}
-                    className='absolute right-[-100px] bottom-[-10px] arrow-one'
+                    className='absolute right-[-100px] bottom-[-115px] arrow-one'
                     keepLastFrame={true}
                 />
             )}

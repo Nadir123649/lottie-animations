@@ -24,7 +24,7 @@ function App() {
             <Innovative />
             <CreativeSection />
             <SliderSection />
-            <Footer />
+          <Footer />
           </div>}
       </div>
     </div>
