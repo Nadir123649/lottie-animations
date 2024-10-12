@@ -2,14 +2,14 @@ import React, { useRef, useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import asset7Logo from '../../images/Asset-7.png';
+import LovLogo from '../../images/loewe logo.png';
 import Lottie from 'lottie-react';
 import arrowAnimation from '../../lottie-animation/stroke-animation/data2.json';
 import curlyarrowAnimation from '../../lottie-animation/stroke-animation/data4.json';
 
 const companiesdata = [
-    { id: 1, logo: asset7Logo },
-    { id: 2, logo: asset7Logo },
+    { id: 1, logo: LovLogo },
+    { id: 2, logo: LovLogo },
 ];
 
 const SliderSection = () => {
@@ -81,7 +81,7 @@ const SliderSection = () => {
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
                         <div key={company.id} className='slide flex justify-center items-center  gap-2py-2 logo-slide'>
-                            <img src={company.logo} alt={`Logo ${company.id}`} className='bg-[#F1F1F1] max-w-[430px] mx-auto w-full block' />
+                            <img src={company.logo} alt={`Logo ${company.id}`} className='max-w-[430px] mx-auto w-full block' />
                         </div>
                     ))}
                 </Slider>
