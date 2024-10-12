@@ -95,7 +95,7 @@ function CreativeSection() {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1.3,
+                    slidesToShow: 1.77,
                     slidesToScroll: 1,
                 }
             }
