@@ -20,7 +20,7 @@ function Footer() {
                             href="mailto:info@constantinougroup.com"
                             className="text-white text-sm font-normal no-underline"
                         >
-                            Contact:info@constantinougroup.com
+                            <b className="font-normal">Contact:</b> info@constantinougroup.com
                         </a>
                     </p>
                 </div>
