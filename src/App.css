@@ -146,9 +146,10 @@
 }
 
 .arrow-three {
-    width: 600px;
-    height: 600px;
-
+    width: 700px;
+    height: 400px;
+    top: 65%;  
+    left: 30%;
 }
 
 .arrow-four {

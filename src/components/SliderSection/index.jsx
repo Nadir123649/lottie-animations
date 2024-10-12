@@ -10,10 +10,9 @@ import bmdord from '../../images/bmdord.png';
 import drewlogo from '../../images/drewlogo.png';
 import twentytwo from '../../images/twentytwo.png';
 import lavas from '../../images/lavas.png';
+import { Player } from '@lottiefiles/react-lottie-player';
 import fila from '../../images/fila.png';
-import Lottie from 'lottie-react';
-import arrowAnimation from '../../lottie-animation/stroke-animation/data2.json';
-import curlyarrowAnimation from '../../lottie-animation/stroke-animation/data4.json';
+import arrowAnimation from '../../lottie-animation/stroke-animation/data1.json';
 
 const companiesdata = [
     { id: 1, logo: LovLogo },
@@ -91,8 +90,14 @@ const SliderSection = () => {
     };
 
     return (
-        <section ref={sectionRef} className='py-10 md:pt-20 relative'>
-            <div className='container client-logo-container mx-auto px-4 mb-[48px] mt-[20px] md:mb-[90px] md:mt-[0px]'>
+        <section ref={sectionRef} className='py-10 md:pt-5 relative'>
+            <div className='pt-0 pb-0 md:pt-12 md:pb-12 mb-[0px] md:mb-[30px] px-2 md:px-0'>
+                <p className='font-semibold text-[18px] md:text-[28px] text-center max-w-[640px] mx-auto  description-title'>
+                    Trusted to lead brands through complex and <br /> challenging transformations
+                </p>
+            </div>
+
+            <div className='container client-logo-container mx-auto px-4 mb-[48px] mt-[20px] md:mb-[20px] md:mt-[20px]'>
                 <Slider {...sliderSettings}>
                     {companiesdata.map((company) => (
                         <div key={company.id} className='slide flex justify-center items-center  gap-2py-2 logo-slide'>
@@ -101,12 +106,17 @@ const SliderSection = () => {
                     ))}
                 </Slider>
             </div>
-            <div className='pt-0 pb-0 md:pt-12 md:pb-12 mb-[0px] md:mb-[90px] px-2 md:px-0'>
-                <p className='text-lg md:text-3xl text-black font-normal text-center'>
-                    Trusted to lead brands through complex and <br /> challenging transformations
-                </p>
-            </div>
+            {hasAnimated && (
+                <Player
+                    autoplay
+                    loop={false}
+                    src={arrowAnimation}
+                    className='absolute  arrow-three'
+                    keepLastFrame={true}
+                />
+            )}
 
+            {/* 
             {hasAnimated && (
                 <Lottie
                     animationData={arrowAnimation}
@@ -122,7 +132,7 @@ const SliderSection = () => {
                     className='absolute right-[-100px] bottom-[-115px] arrow-one'
                     keepLastFrame={true}
                 />
-            )}
+            )} */}
         </section>
     );
 };

@@ -32,7 +32,7 @@ function Innovative() {
     return (
         <section
             ref={sectionRef}
-            className={`box fadeIn relative flex justify-center items-center flex-col pt-4 px-3 md:px-5 md:pt-0 pb-20 ${hasAnimated ? 'fade-up' : ''}`}
+            className={`box fadeIn relative flex justify-center items-center flex-col pt-0 px-3 md:px-5 md:pt-0 pb-20 mt-[-40px] ${hasAnimated ? 'fade-up' : ''}`}
         >
             <h1 className="text-center text-lg md:text-2xl font-normal leading-normal md:leading-[38px]">
                 We do everything imaginable in the world of creative <br className="hidden md:block" />
@@ -56,7 +56,7 @@ function Innovative() {
                 to express your brand’s values and personality through every channel that makes
                 sense—and even a few that don’t!
             </p>
-            {hasAnimated && (
+            {/* {hasAnimated && (
                 <Player
                     autoplay
                     loop={false}
@@ -64,7 +64,7 @@ function Innovative() {
                     className="absolute right-[40px] bottom-[-90px] max-w-[640px] arrow-five w-full"
                     keepLastFrame={true}
                 />
-            )}
+            )} */}
         </section>
     );
 }

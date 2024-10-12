@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Player } from '@lottiefiles/react-lottie-player';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,7 +7,6 @@ import productlogo from '../../images/mark-product.png';
 import developmentlogo from '../../images/app development.png';
 import marketinglogo from '../../images/mark-marketing.png';
 import advertisinglogo from '../../images/advertising.png';
-import arrowAnimation from '../../lottie-animation/stroke-animation/data1.json';
 
 function CreativeSection() {
     const [hasAnimated, setHasAnimated] = useState(false);
@@ -105,17 +103,7 @@ function CreativeSection() {
     };
 
     return (
-        <section ref={sectionRef} id='needs-section' className='creative-box-section pt-[80px] pb-[0px] md:pt-[60px] md:pb-[60px] relative'>
-            {hasAnimated && (
-                <Player
-                    autoplay
-                    loop={false}
-                    src={arrowAnimation}
-                    className='absolute  bottom-[-260px] right-0 arrow-three'
-                    keepLastFrame={true}
-                />
-            )}
-
+        <section ref={sectionRef} id='needs-section' className='creative-box-section pt-[80px] pb-[0px] md:pt-[140px] md:pb-[10px] relative'>
             <h1 className='font-semibold text-[18px] md:text-[28px] text-center max-w-[640px] mx-auto  description-title'>
                 Creative solutions. Exceptional results.
                 Assisting brands succeed through every challenge.
