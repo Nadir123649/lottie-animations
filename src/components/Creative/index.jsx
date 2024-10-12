@@ -95,8 +95,10 @@ function CreativeSection() {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow:  1.25,    
+                    slidesToShow:  1.6,    
                     slidesToScroll: 1,
+                    autoplaySpeed: 30000,
+                    speed: 1000,
                 }
             }
         ]
