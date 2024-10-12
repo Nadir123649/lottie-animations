@@ -82,13 +82,16 @@ body {
     background: black;
     padding-top: 40px;
     min-height: 50vh;
-
     margin-bottom: 17.8890876565vw;
     position: relative;
     transition: all 1.5s ease;
     width: 100%;
 }
 
+.mobile-home-banner {
+    min-height: 100vh;
+    animation: slideDown 2s forwards;
+}
 
 .home-banner h1 {
     font-size: 18px;
@@ -153,11 +156,21 @@ main.finished .home-banner {
     .order-three {
         order: 2;
     }
-
     .mobile-home-banner {
         min-height: 100vh;
         animation: slideDown 2s forwards;
     }
+    
+    @keyframes slideDown {
+        0% {
+            min-height: 100vh;
+        }
+    
+        100% {
+            min-height: 30vh;
+        }
+    }
+    
 
 }
 
