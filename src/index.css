@@ -156,21 +156,11 @@ main.finished .home-banner {
     .order-three {
         order: 2;
     }
-    .mobile-home-banner {
+    .mobile-home-mob {
         min-height: 100vh;
-        animation: slideDown 2s forwards;
+        animation: slideUp 2s forwards;
     }
-    
-    @keyframes slideDown {
-        0% {
-            min-height: 100vh;
-        }
-    
-        100% {
-            min-height: 30vh;
-        }
-    }
-    
+
 
 }
 
@@ -246,3 +236,14 @@ main.finished .home-banner {
         min-height: 50vh;
     }
 }
+
+@keyframes slideUp {
+    0% {
+        min-height: 100vh;
+    }
+
+    100% {
+        min-height: 30vh;
+    }
+}
+

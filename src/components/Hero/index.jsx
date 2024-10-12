@@ -42,7 +42,7 @@ function Hero() {
     }, []);
 
     return (
-        <section className="home-banner mobile-home-banner">
+        <section className="home-banner mobile-home-banner mobile-home-mob">
             <div style={{ position: 'relative', zIndex: 22 }}>
                 <Lottie
                     options={defaultOptions(logoAnimation)}
