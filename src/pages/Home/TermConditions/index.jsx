@@ -7,7 +7,7 @@ const TermConditions = () => {
 
     return (
         <section>
-            <div className='container text-center py-10'>
+            <div className='container text-center py-5'>
                 <p className='font-semibold text-[18px] md:text-[20px] text-center max-w-[640px] mx-auto  '>
                     Terms and Conditions
                 </p>
