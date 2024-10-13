@@ -117,7 +117,7 @@ function CreativeSection() {
                 <div className='container mt-[30px] md:mt-0'>
                     <Slider {...sliderSettings}>
                         {dataSets.map(({ id, title, description, logo }) => (
-                            <div key={id} className='flex flex-col gap-2 items-center p-4 marketing-boxes'>
+                            <div key={id} className='flex flex-col gap-2 items-center p-2 md:p-4 marketing-boxes'>
                                 <div className='hover-container flex flex-col items-center gap-2'>
                                     <img src={logo} alt={title} className='hover-img' />
                                     <h1 className='hover-title font-semibold text-[17px]'>{title}</h1>
