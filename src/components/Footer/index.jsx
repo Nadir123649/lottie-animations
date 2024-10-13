@@ -16,14 +16,14 @@ function Footer() {
                         © Constantinou Group. 2024. All rights reserved
                     </p>
                     <img src={umbrella} alt="umbrella" className="max-w-[60px] order-two " />
-                    <div className="flex flex-row gap-10">
+                    <div className="flex flex-col gap-3 items-center  md:gap-20 md:flex-row order-three">
                         <p className="text-white text-sm mb-0 order-three pt-0 md:mt-3">
                             <Link to="/terms-and-conditions"
-                                className="text-white text-sm font-normal no-underline hover:underline">
+                                className="text-white text-xs font-normal no-underline hover:underline">
                                 Terms & Conditions
                             </Link>
                         </p>
-                        <p className="text-white text-sm mb-0 order-three pt-0 md:mt-3">
+                        <p className="text-white text-sm mb-0  pt-0 md:mt-3">
                             <a
                                 href="mailto:info@constantinougroup.com"
                                 className="text-white text-sm font-normal no-underline"

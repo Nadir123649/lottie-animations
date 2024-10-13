@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 
 const TermConditions = () => {
-    // Scroll to the top of the page when this component is mounted
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
