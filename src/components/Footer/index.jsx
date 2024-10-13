@@ -10,17 +10,17 @@ function Footer() {
                 </svg>
             </div>
             <div className="main-footer  bg-black relative px-5 pb-[5px]">
-                <div className="container  flex flex-col gap-3 md:flex-row md:gap-0 justify-between items-center">
-                    <p className="order-one text-white text-xs">
+                <div className="container  flex flex-col gap-3 pb-4 md:flex-row md:gap-0 justify-between items-center">
+                    <p className="order-one text-white text-xs pt-4">
                         © Constantinou Group. 2024. All rights reserved
                     </p>
-                    <img src={umbrella} alt="umbrella" className="max-w-[80px] order-two" />
-                    <p className="text-white text-sm mb-0 order-three ">
+                    <img src={umbrella} alt="umbrella" className="max-w-[80px] order-two " />
+                    <p className="text-white text-sm mb-0 order-three pt-4">
                         <a
                             href="mailto:info@constantinougroup.com"
                             className="text-white text-sm font-normal no-underline"
                         >
-                            <b className="font-normal">Contact:</b> info@constantinougroup.com
+                            info@constantinougroup.com
                         </a>
                     </p>
                 </div>

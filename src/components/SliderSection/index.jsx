@@ -15,7 +15,6 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import fila from '../../images/fila.png';
 import arrowAnimation from '../../lottie-animation/stroke-animation/data1.json';
 
-
 const companiesdata = [
     { id: 1, logo: LovLogo },
     { id: 2, logo: rhodelogo },
@@ -27,7 +26,6 @@ const companiesdata = [
     { id: 8, logo: lavas },
     { id: 9, logo: fila },
     { id: 10, logo: lvmhg },
-
 ];
 
 const SliderSection = () => {
@@ -68,23 +66,26 @@ const SliderSection = () => {
         dots: false,
         arrows: false,
         cssEase: "linear",      // Linear easing for a consistent smooth effect
+        pauseOnHover: true,     // Pauses the autoplay when the user hovers over the slider
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     speed: 1000,
-                    autoplaySpeed: 3000
+                    autoplaySpeed: 3000,
+                    pauseOnHover: true  // Ensuring pause on hover for this breakpoint
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     speed: 1000,
-                    autoplaySpeed: 3000
+                    autoplaySpeed: 3000,
+                    pauseOnHover: true  // Ensuring pause on hover for this breakpoint
                 }
             },
             {
@@ -92,13 +93,14 @@ const SliderSection = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    speed: 1000,          // Keeping consistent speed across breakpoints
-                    autoplaySpeed: 3000    // Slowing down for mobile users as well
+                    speed: 1000,
+                    autoplaySpeed: 3000,
+                    pauseOnHover: true  // Ensuring pause on hover for mobile as well
                 }
             }
         ]
     };
-
+    
     return (
         <section ref={sectionRef} className='pt-[120px] md:py-10 md:pt-5 relative'>
             <div className='pt-0 pb-0 md:pt-12 md:pb-12 mb-[40px] md:mb-[30px] px-2 md:px-0'>

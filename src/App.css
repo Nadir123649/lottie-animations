@@ -149,7 +149,7 @@
     width: 700px;
     height: 400px;
     position: absolute;
-    top: 144%;
+    top: 130%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -199,12 +199,8 @@
     }
 
     .arrow-three {
-        top: 10%;
         width: 309px;
         overflow: hidden !important;
-        height: 78px;
-        bottom: -93px;
-
     }
 
     .arrow-four {
