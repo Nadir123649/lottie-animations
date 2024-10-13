@@ -14,7 +14,7 @@ function Innovative() {
                     setHasAnimated(true);
                 }
             },
-            { threshold: 0.4 }
+            { threshold: 0.8 }
         );
 
         if (sectionRef.current) {
