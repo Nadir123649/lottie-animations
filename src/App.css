@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .marketing-boxes img {
     max-width: 150px;
     object-fit: contain;
@@ -13,44 +12,49 @@
     margin-bottom: 10px;
 }
 
+/* Hover container styling */
 .hover-container {
     position: relative;
     text-align: center;
     transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-    /* Smoother transition */
     cursor: pointer;
 }
 
+/* Image and title transitions */
 .hover-img,
 .hover-title {
     transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.2s ease-in-out;
 }
 
+/* Description starts hidden */
 .hover-description {
     opacity: 0;
     transform: translateY(15px);
-    /* Slightly increased to enhance the transition */
-    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
-    /* Smoother description transition */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.hover-container:hover .hover-img {
-    transform: translateY(-12px);
-    /* More noticeable movement */
-    opacity: 1;
-    /* Make it fully visible */
-}
-
+/* Hover effect for desktop */
+.hover-container:hover .hover-img,
 .hover-container:hover .hover-title {
     transform: translateY(-12px);
     opacity: 1;
-    /* Full opacity */
 }
 
 .hover-container:hover .hover-description {
     opacity: 1;
     transform: translateY(0);
-    /* Bring it to its original position smoothly */
+}
+
+/* For mobile: when clicked, apply the same hover effect */
+.hover-container.active .hover-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hover-container.active .hover-img,
+.hover-container.active .hover-title {
+    transform: translateY(-12px);
+    opacity: 1;
 }
 
 /* Responsive design */
@@ -61,17 +65,14 @@
 
     .hover-img {
         width: 80%;
-        /* Adjust image size on smaller screens */
     }
 
     .hover-title {
         font-size: 16px;
-        /* Adjust font size for mobile */
     }
 
     .hover-description {
         font-size: 14px;
-        /* Smaller text for mobile screens */
     }
 }
 
@@ -206,7 +207,7 @@
 
     .arrow-four {
         width: 100px;
-        top: 94% !important;    
+        top: 94% !important;
     }
 
     .arrow-five {
