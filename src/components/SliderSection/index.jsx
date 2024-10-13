@@ -57,16 +57,15 @@ const SliderSection = () => {
     }, [hasAnimated]);
 
     const sliderSettings = {
-        infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 1000,            // Reduced transition time for smoother sliding
+        speed: 500,            // Reduced transition time for smoother sliding
         autoplaySpeed: 3000,    // Increased autoplay speed to 3 seconds between slides
         dots: false,
         arrows: false,
         cssEase: "linear",      // Linear easing for a consistent smooth effect
-        pauseOnHover: true,     // Pauses the autoplay when the user hovers over the slider
+        pauseOnHover: false,     // Pauses the autoplay when the user hovers over the slider
         responsive: [
             {
                 breakpoint: 1024,
