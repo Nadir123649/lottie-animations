@@ -144,6 +144,9 @@
     bottom: -74px;
 }
 
+.make-gap{
+    gap: 50px;
+}
 .arrow-three {
     width: 700px;
     height: 400px;
@@ -206,6 +209,9 @@
     .arrow-four {
         width: 100px;
         top: 94% !important;
+    }
+    .make-gap{
+        gap: 16px !important;
     }
 
     .arrow-five {

@@ -16,7 +16,7 @@ function Footer() {
                         © Constantinou Group. 2024. All rights reserved
                     </p>
                     <img src={umbrella} alt="umbrella" className="max-w-[60px] order-two " />
-                    <div className="flex flex-col gap-3 items-center  md:gap-20 md:flex-row order-three">
+                    <div className="flex flex-col items-center make-gap  md:flex-row order-three">
                         <p className="text-white text-sm mb-0 order-three pt-0 md:mt-3">
                             <Link to="/terms-and-conditions"
                                 className="text-white text-xs font-normal no-underline hover:underline">
