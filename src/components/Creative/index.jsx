@@ -88,7 +88,7 @@ function CreativeSection() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1.35,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplaySpeed: 3000, // Adjust for smaller screens
                     speed: 1000
@@ -97,7 +97,7 @@ function CreativeSection() {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplaySpeed: 3000,  // Keep consistent, or slow down to 30s if desired
                     speed: 1000,          // Same transition speed for smoother effects
