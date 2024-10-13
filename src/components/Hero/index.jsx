@@ -4,7 +4,7 @@ import logoAnimation from '../../lottie-animation/logo main.json';
 
 function Hero() {
     const [isSlideComplete, setIsSlideComplete] = useState(false);
-    const [animationSpeed, setAnimationSpeed] = useState(2);
+    const [animationSpeed, setAnimationSpeed] = useState(1.5);
     const [isJiggling, setIsJiggling] = useState(false);
 
     const defaultOptions = (animationData) => ({
