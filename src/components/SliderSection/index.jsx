@@ -10,9 +10,11 @@ import bmdord from '../../images/bmdord.png';
 import drewlogo from '../../images/drewlogo.png';
 import twentytwo from '../../images/twentytwo.png';
 import lavas from '../../images/lavas.png';
+import lvmhg from '../../images/lvmhg.png';
 import { Player } from '@lottiefiles/react-lottie-player';
 import fila from '../../images/fila.png';
 import arrowAnimation from '../../lottie-animation/stroke-animation/data1.json';
+
 
 const companiesdata = [
     { id: 1, logo: LovLogo },
@@ -24,6 +26,8 @@ const companiesdata = [
     { id: 7, logo: twentytwo },
     { id: 8, logo: lavas },
     { id: 9, logo: fila },
+    { id: 10, logo: lvmhg },
+
 ];
 
 const SliderSection = () => {
