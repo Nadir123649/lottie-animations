@@ -10,7 +10,7 @@ function Footer() {
                 </svg>
             </div>
             <div className="main-footer bg-black relative px-5 pb-[5px]">
-                <div className="container  flex flex-col gap-3 md:flex-row md:gap-0 justify-between items-end">
+                <div className="container  flex flex-col gap-3 pb-4 md:flex-row md:gap-0 md:pb-0 justify-between items-center md:items-end">
                     <p className="order-one text-white text-xs pt-0 md:mt-3">
                         © Constantinou Group. 2024. All rights reserved
                     </p>
