@@ -10,12 +10,6 @@ import advertisinglogo from '../../images/advertising.png';
 
 function CreativeSection() {
 
-    const [isClicked, setIsClicked] = useState(false);
-
-    const handleToggle = () => {
-        setIsClicked(!isClicked);
-    };
-
     const [hasAnimated, setHasAnimated] = useState(false);
     const sectionRef = useRef(null);
 
@@ -106,8 +100,8 @@ function CreativeSection() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    autoplaySpeed: 1000,  // Keep consistent, or slow down to 30s if desired
-                    speed: 1000,          // Same transition speed for smoother effects
+                    autoplaySpeed: 3000, // Adjust for smaller screens
+                    speed: 1000      // Same transition speed for smoother effects
                 }
             }
         ]
@@ -125,11 +119,10 @@ function CreativeSection() {
                     <Slider {...sliderSettings}>
                         {dataSets.map(({ id, title, description, logo }) => (
                             <div key={id} className='flex flex-col gap-2 items-center p-2 md:p-4 marketing-boxes'>
-                                <div className='hover-container flex flex-col items-center gap-2' onClick={handleToggle}>
+                                <div className='hover-container flex flex-col items-center gap-2'>
                                     <img src={logo} alt={title} className='hover-img' />
                                     <h1 className='hover-title font-semibold text-[17px]'>{title}</h1>
-                                    <p className='hover-description hidden  md:block'>{description}</p>
-                                    <p className={`hover-description ${isClicked ? 'active' : ''}`}>{description}</p>
+                                    <p className='hover-description'>{description}</p>
                                 </div>
                             </div>
                         ))}
