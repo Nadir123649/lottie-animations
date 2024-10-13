@@ -178,7 +178,7 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .description-title {
         padding-bottom: 10px;
     }
@@ -201,6 +201,7 @@
     .arrow-three {
         width: 309px;
         overflow: hidden !important;
+        top: 117% !important;
     }
 
     .arrow-four {

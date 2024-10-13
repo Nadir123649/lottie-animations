@@ -102,7 +102,7 @@ const SliderSection = () => {
     };
     
     return (
-        <section ref={sectionRef} className='pt-[120px] md:py-10 md:pt-5 relative'>
+        <section ref={sectionRef} className='pt-[0px] md:py-10 md:pt-5 relative'>
             <div className='pt-0 pb-0 md:pt-12 md:pb-12 mb-[40px] md:mb-[30px] px-2 md:px-0'>
                 <p className='font-semibold text-[18px] md:text-[28px] text-center max-w-[640px] mx-auto  description-title'>
                     Trusted to lead brands through complex and <br className='hidden md:block' /> challenging transformations
@@ -119,7 +119,6 @@ const SliderSection = () => {
                                 className='w-[180px] h-[50px] min-h-[50px] md:w-[234px] md:h-[60px] md:min-h-[60px] mx-auto block object-contain'
                             />
                         </div>
-
                     ))}
                 </Slider>
             </div>
