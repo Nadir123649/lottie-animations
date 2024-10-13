@@ -1,5 +1,6 @@
 import React from "react";
 import umbrella from "../../images/umbrella.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
@@ -15,14 +16,22 @@ function Footer() {
                         © Constantinou Group. 2024. All rights reserved
                     </p>
                     <img src={umbrella} alt="umbrella" className="max-w-[60px] order-two " />
-                    <p className="text-white text-sm mb-0 order-three pt-0 md:mt-3">
-                        <a
-                            href="mailto:info@constantinougroup.com"
-                            className="text-white text-sm font-normal no-underline"
-                        >
-                            info@constantinougroup.com
-                        </a>
-                    </p>
+                    <div className="flex flex-row gap-10">
+                        <p className="text-white text-sm mb-0 order-three pt-0 md:mt-3">
+                            <Link to="/terms-and-conditions"
+                                className="text-white text-sm font-normal no-underline hover:underline">
+                                Terms & Conditions
+                            </Link>
+                        </p>
+                        <p className="text-white text-sm mb-0 order-three pt-0 md:mt-3">
+                            <a
+                                href="mailto:info@constantinougroup.com"
+                                className="text-white text-sm font-normal no-underline"
+                            >
+                                info@constantinougroup.com
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>
