@@ -100,8 +100,8 @@ function CreativeSection() {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    autoplaySpeed: 3000, // Adjust for smaller screens
-                    speed: 1000      // Same transition speed for smoother effects
+                    autoplaySpeed: 3000, 
+                    speed: 1000     
                 }
             }
         ]
